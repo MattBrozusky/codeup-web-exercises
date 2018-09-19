@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Residential Lease Application</title>
+    </head>
+    <body>
+        <header>
+            <img src="http://placeholder.pics/svg/48" alt="placeholder">
+            <h1>Residential Lease Application</h1>
+            <p><em><stong>Each occupant and co-applicant 18 years or older must submit a separate application.</stong></em></p>
+        </header>
+        <hr>
+        <main>
+            <section>
+                <label>Property Address:
+                    <textarea name="address" placeholder="Property Address" rows="1" cols="25"></textarea>
+                </label>
+                <br>
+                <p>Anticipated:
+                    <label>Move-in Date:
+                        <textarea name="move-in" placeholder="00/00/00" rows="1" cols="20"></textarea>
+                    </label>
+                    <label>Monthly Rent:$
+                        <textarea name="rent" placeholder="00.00" rows="1" cols="20"></textarea>
+                    </label>
+                    <label>Security Deposit:$
+                        <textarea name="deposit" placeholder="00.00" rows="1" cols="20"></textarea>
+                    </label>
+                </p>
+                <p>Applicant was referred to Landlord by:
+                    <label>Real estate agent
+                        <input type="radio" id="real_estate" name="q1" value="a">
+                            <textarea name="agent_name" placeholder="Name" rows="1" cols="20" disabled></textarea>
+                            <textarea name="agent_phone" placeholder="Phone Number" rows="1" cols="15" disabled></textarea>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" id="newspaper" name="q1" value="b">Newspaper
+                    </label>
+                    <label>
+                        <input type="radio" id="sign" name="q1" value="c">Sign
+                    </label>
+                    <label>
+                        <input type="radio" id="internet" name="q1" value="d">Internet
+                    </label>
+                    <label>
+                        <input type="radio" id="other" name="q1" value="d">Other
+                            <textarea name="other" placeholder="Please Specify" rows="1" cols="20" disabled></textarea>
+                    </label>
+                </p>
+                <p>
+                    <label>Applicant's name
+                        <textarea name="applicant's_name" placeholder="(first, middle, last)" rows="1" cols="45"></textarea>
+                    </label>
+
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

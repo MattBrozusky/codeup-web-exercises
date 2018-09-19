@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Forms Practice</title>
+    </head>
+    <body>
+        <form method="POST" action="https://http-inspector.glitch.me">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text">
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+
+            <hr>
+
+            <textarea name="bio" placeholder="Type Bio Here" rows="6"></textarea>
+
+            <br>
+
+            <p>How did you hear about us?</p>
+
+            <input type="radio" id="billboard" name="q1" value="a">
+            <label for="billboard">Billboard</label><br>
+
+            <input type="radio" id="radio" name="q2" value="b">
+            <label for="radio">Radio Advertisement</label><br>
+
+            <input type="radio" id="internet" name="q3" value="c">
+            <label for="internet">Internet Advertisement</label><br>
+
+            <input type="radio" id="other" name="q4" value="d">
+            <label for="other">Other</label><br>
+
+            <hr>
+
+            <p>What web browser are you using?</p>
+            <select name="browser">
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="explorer">Explorer</option>
+            </select>
+
+            <input type="submit">
+
+        </form>
+
+    </body>
+</html>

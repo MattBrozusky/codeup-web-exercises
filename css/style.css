@@ -1,5 +1,21 @@
 
 .fancy-header {
-    color: purple;
+    color: #7EA0B7;
     text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: #7EA0B7;
+    text-decoration: underline;
+}
+
+body {
+    font
+    background-image: url("../img/128-198.jpg");
+    background-repeat: repeat;
+}
+
+ul {
+    list-style-type: square;
 }

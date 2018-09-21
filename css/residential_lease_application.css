@@ -1,0 +1,42 @@
+/*Entire page*/
+
+article {
+    margin: 0.6em 4.5em 0.6em 4.5em;
+}
+
+hr {
+     width: 90%;
+     margin: 0 4.5em 0 4.5em;
+}
+
+textarea {
+    resize: none;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid black;
+    position: relative;
+    top: 1px;
+}
+
+/*Top of page*/
+
+header {
+    text-align: center;
+}
+
+
+
+/*Middle of page*/
+
+.agent {
+    margin: 0.6em 0 0.6em 0;
+}
+
+.title {
+    margin: 0.6em 4.5em 0.6em 4.5em;
+}
+
+
+
+/*Bottom of page*/

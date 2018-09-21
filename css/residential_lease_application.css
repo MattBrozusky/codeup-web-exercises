@@ -19,6 +19,7 @@ textarea {
     top: 1px;
 }
 
+
 /*Top of page*/
 
 header {
@@ -36,6 +37,10 @@ header {
 .title {
     margin: 0.6em 4.5em 0.6em 4.5em;
 }
+
+/*.emergency-contact {
+    float: right;
+}*/
 
 
 

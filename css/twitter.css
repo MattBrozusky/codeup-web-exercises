@@ -119,6 +119,7 @@ a {
 
 .media-body {
     width: calc(100% - 50px);
+    float: right;
 }
 
 .btn {

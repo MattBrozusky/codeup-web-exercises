@@ -1,5 +1,10 @@
 /*Entire page*/
 
+.margin {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 article {
     margin: 0.6em 4.5em 0.6em 4.5em;
 }
@@ -11,6 +16,7 @@ hr {
 
 textarea {
     resize: none;
+    outline: none;
     border-top: transparent;
     border-left: transparent;
     border-right: transparent;
@@ -30,17 +36,37 @@ header {
 
 /*Middle of page*/
 
+.small-indent {
+    margin-left: 2em
+}
+
+.indent {
+    position: relative;
+    left: 5em;
+}
+
 .agent {
     margin: 0.6em 0 0.6em 0;
 }
 
 .title {
-    margin: 0.6em 4.5em 0.6em 4.5em;
+    margin: 0.6em 2em 0.6em 4.5em;
 }
 
-/*.emergency-contact {
+.button {
+    margin-left: 2em;
+}
+
+.emergency-contact {
     float: right;
-}*/
+    position: relative;
+    right: 10em;
+}
+
+.clear {
+    margin-top: 6em;
+    clear: right;
+}
 
 
 

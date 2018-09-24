@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>                           <!-- To do: add placeholders, style-->
+    <head>                           <!-- To do: add placeholders, style, add tabing to radio boxes-->
         <meta charset="utf-8">
         <title>Residential Lease Application</title>
         <link rel="stylesheet" href="css/residential_lease_application.css">
@@ -16,10 +16,10 @@
             <section>
                 <article>
                     <label>Property Address:
-                        <textarea name="address" placeholder="Property Address" rows="1" cols="150"></textarea>
+                        <textarea name="address" placeholder="Property Address" rows="1" cols="190"></textarea>
                     </label>
                 </article>
-                <article>Anticipated:
+                <article class="indent">Anticipated:
                     <label>Move-in Date:</label>
                         <span>
                              <select title="month" name="month">
@@ -138,72 +138,76 @@
                         <textarea name="deposit" placeholder="00.00" rows="1" cols="20"></textarea>
                     </label>
                 </article>
-                <article>Applicant was referred to Landlord by:
-                    <div class="agent">
-                        <label>Real estate agent
-                            <input type="radio" id="real_estate" name="q1" value="a">
+                <article class="margin">Applicant was referred to Landlord by:
+                    <div class="agent indent">
+                        <label>
+                            <input type="radio" id="real_estate" name="q1" value="a">Real estate agent:
                         </label>
-                            <textarea name="agent_name" placeholder="Name" rows="1" cols="20" disabled></textarea>
-                            <textarea name="agent_phone" placeholder="Phone Number" rows="1" cols="15" disabled></textarea>
+                            <textarea name="agent_name" placeholder="Name" rows="1" cols="100" disabled></textarea>
+                            <textarea name="agent_phone" placeholder="Phone Number" rows="1" cols="30" disabled></textarea>
                     </div>
-                    <label>
-                        <input type="radio" id="newspaper" name="q1" value="b">Newspaper
-                    </label>
-                    <label>
-                        <input type="radio" id="sign" name="q1" value="c">Sign
-                    </label>
-                    <label>
-                        <input type="radio" id="internet" name="q1" value="d">Internet
-                    </label>
-                    <label>
-                        <input type="radio" id="other" name="q1" value="d">Other
-                    </label>
-                        <textarea name="other" placeholder="Please Specify" rows="1" cols="20" disabled></textarea>
+                    <p class="indent">
+                        <label>
+                            <input type="radio" id="newspaper" name="q1" value="b">Newspaper
+                        </label>
+                        <label>
+                            <input type="radio" id="sign" class="button" name="q1" value="c">Sign
+                        </label>
+                        <label>
+                            <input type="radio" id="internet" class="button" name="q1" value="d">Internet
+                        </label>
+                        <label>
+                            <input type="radio" id="other" class="button" name="q1" value="d">Other:
+                        </label>
+                            <textarea name="other" placeholder="Please Specify" rows="1" cols="100" disabled></textarea>
+                    </p>
                 </article>
                 <div>
                     <article>
                         <label>Applicant's name:
-                            <textarea name="applicant's_name" placeholder="(first, middle, last)" rows="1" cols="45"></textarea>
+                            <textarea name="applicant's_name" placeholder="(first, middle, last)" rows="1" cols="190"></textarea>
                         </label>
-                        <label>Is there a co-applicant?
-                            <select name="co-applicant">
-                                <option value="yes">Yes</option>
-                                <option value="no" selected>no</option>
-                            </select>
-                        </label>
-                        <span><em>If yes, co-applicant must submit a separate application</em></span>
+                        <p class="indent">
+                            <label>Is there a co-applicant?
+                                <select name="co-applicant">
+                                    <option value="yes">Yes</option>
+                                    <option value="no" selected>no</option>
+                                </select>
+                            </label>
+                            <span><em>If yes, co-applicant must submit a separate application</em></span>
+                        </p>
                     </article>
-                    <article>
-                        <label>Applican't former last name (maiden or married)
-                            <textarea name="applicant's_former_name" rows="1" cols="25"></textarea>
+                    <article class="indent">
+                        <label>Applican't former last name (maiden or married):
+                            <textarea name="applicant's_former_name" rows="1" cols="144"></textarea>
                         </label>
                     </article>
                 </div>
             </section>
             <section>
-                <div>
+                <div class="indent">
                     <article>
                         <label>Email
-                            <textarea name="email" rows="1" cols="25"></textarea>
+                            <textarea name="email" rows="1" cols="90"></textarea>
                         </label>
-                        <label>Home Phone
-                            <textarea name="home_phone" rows="1" cols="25"></textarea>
+                        <label class="small-indent">Home Phone
+                            <textarea name="home_phone" rows="1" cols="36"></textarea>
                         </label>
                     </article>
                     <article>
                         <label>Work Phone
-                            <textarea name="work_phone" rows="1" cols="25"></textarea>
+                            <textarea name="work_phone" rows="1" cols="83"></textarea>
                         </label>
-                        <label>Mobile Phone
-                            <textarea name="mobile_phone" rows="1" cols="25"></textarea>
+                        <label class="small-indent">Mobile Phone
+                            <textarea name="mobile_phone" rows="1" cols="35"></textarea>
                         </label>
                     </article>
                     <article>
                         <label>Soc. Sec. No.
-                            <textarea name="ssn" rows="1" cols="25"></textarea>
+                            <textarea name="ssn" rows="1" cols="82"></textarea>
                         </label>
-                        <label>Driver License No.
-                            <textarea name="driver_license" rows="1" cols="25"></textarea>
+                        <label class="small-indent">Driver License No.
+                            <textarea name="driver_license" rows="1" cols="30"></textarea>
                         </label>
                         <label>in
                             <select name="state" title="state">
@@ -374,13 +378,13 @@
                                       <option value="1960">1960</option>
                                  </select>
                             </span>
-                        <label>Height
-                            <textarea name="height" rows="1" cols="10"></textarea>
+                        <label class="small-indent">Height
+                            <textarea name="height" rows="1" cols="25"></textarea>
                         </label>
-                        <label>Weight
-                            <textarea name="weight" rows="1" cols="10"></textarea>
+                        <label class="small-indent">Weight
+                            <textarea name="weight" rows="1" cols="25"></textarea>
                         </label>
-                        <label>Eye Color
+                        <label class="small-indent">Eye Color
                             <select name="eye_color" id="eye_color">
                                 <option value="brown">Brown</option>
                                 <option value="green">Green</option>
@@ -656,27 +660,29 @@
                         </label>
                     </article>
                 </div>
-                <div><span class="title">Emergency Contact:</span>
-                    <article>
-                        <label>Name:
-                            <textarea name="emergency_name" rows="1" cols="30"></textarea>
-                        </label>
-                    </article>
-                    <article>
-                        <label>Address:
-                            <textarea name="emergency_address" rows="1" cols="30"></textarea>
-                        </label>
-                    </article>
-                    <article>
-                        <label>Phone:
-                            <textarea name="emergency_phone" rows="1" cols="10"></textarea>
-                        </label>
-                        <label>E-mail:
-                            <textarea name="emergency_e-mail" rows="1" cols="20"></textarea>
-                        </label>
-                    </article>
+                <div class="margin"><span class="title">Emergency Contact:</span>
+                    <section class="emergency-contact">
+                        <article>
+                            <label>Name:
+                                <textarea name="emergency_name" rows="1" cols="30"></textarea>
+                            </label>
+                        </article>
+                        <article>
+                            <label>Address:
+                                <textarea name="emergency_address" rows="1" cols="30"></textarea>
+                            </label>
+                        </article>
+                        <article>
+                            <label>Phone:
+                                <textarea name="emergency_phone" rows="1" cols="10"></textarea>
+                            </label>
+                            <label>E-mail:
+                                <textarea name="emergency_e-mail" rows="1" cols="20"></textarea>
+                            </label>
+                        </article>
+                    </section>
                 </div>
-                <div><span class="title">Name all other persons who will occupy the Property:</span>
+                <div class="margin clear"><span class="title">Name all other persons who will occupy the Property:</span>
                     <article>
                         <label>Name:
                             <textarea name="other_name1" rows="1" cols="25"></textarea>
@@ -724,7 +730,7 @@
                 </div>
             </section>
             <section>
-                <div>
+                <div class="margin">
                     <article>
                         <label>Applicant's Current Address:
                             <textarea name="current_address" rows="1" cols="50"></textarea>
@@ -974,7 +980,7 @@
                         </label>
                     </article>
                 </div>
-                <div>
+                <div class="margin">
                     <article>
                         <label>Applicant's Previous Address:
                             <textarea name="previous_address2" rows="1" cols="50"></textarea>
@@ -1224,7 +1230,7 @@
                         </label>
                     </article>
                 </div>
-                <div>
+                <div class="margin">
                     <article>
                         <label>Applicant's Current Employer:
                             <textarea name="current_employer" rows="1" cols="30"></textarea>

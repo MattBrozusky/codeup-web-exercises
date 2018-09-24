@@ -1,0 +1,88 @@
+/*Whole page*/
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    font-size: 1.125em;
+}
+
+hr {
+    border: 1.5px solid;
+    max-width: 50px;
+}
+
+.hr-light {
+    color: #ffffff;
+}
+
+.hr-red {
+    color: #ff0000;
+}
+
+.space {
+    margin-bottom: 2.3em;
+}
+
+/*Top of page*/
+
+header {
+    background-color: rgb(221, 46, 57);
+
+    padding: 85px 0 50px 0;
+    color: #ffffff;
+}
+
+.login {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.23);
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+.purchase {
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0 0 10px 0;
+    font-family: "Brush Script MT", cursive;
+    position: relative;
+    top: -20px;
+}
+
+header a {
+    color: #ffffff;
+}
+
+.started {
+    position: relative;
+    top: 10px;
+}
+
+
+/*Middle section*/
+
+.intro {
+    margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+/*Footer Section*/

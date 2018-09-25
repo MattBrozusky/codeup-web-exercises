@@ -1,17 +1,29 @@
+/* Start of Grid Layout Style*/
 
+html, * {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
 
 .row {
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
 }
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .column {
     float: left;
-    padding: 25px;
+    padding: 10px;
     margin: 30px 0;
-    box-sizing: border-box;
 }
 
 .one-half {
@@ -24,6 +36,10 @@
 
 .one-fourth {
     width: 25%;
+}
+
+.one-sixth {
+    width: 16.6666%;
 }
 
 .one-eighth {
@@ -49,3 +65,5 @@
 .offset-one-eighth {
     margin-left: 12.5%;
 }
+
+/*End of Grid Layout Style*/

@@ -1,3 +1,13 @@
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /*Entire Page*/
 
 body {
@@ -27,7 +37,6 @@ h1 {
 }
 
 .header-img {
-    max-width: 100%;
     height: auto;
 }
 
@@ -77,13 +86,12 @@ span img {
 
 /*Webpage*/
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:826px) {
 
     /*Grid Layout*/
 
     .row {
         margin: 0 auto;
-        width: 100%;
     }
 
     .column {
@@ -127,12 +135,6 @@ span img {
         display: none;
     }
 
-    .header-img {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     nav {
         text-align: right;
     }
@@ -144,11 +146,6 @@ span img {
         display: inline-block;
     }
 
-    footer {
-        margin-top: 600px;
-
-    }
-
     footer p {
         padding-top: 80px;
         font-size: medium;
@@ -157,8 +154,6 @@ span img {
     span img {
         width: 60px;
         height: auto;
-        margin-bottom: 30px;
-        margin-top: 70px;
     }
 
     #social-media-links {

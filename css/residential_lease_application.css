@@ -60,7 +60,8 @@ header {
 .emergency-contact {
     float: right;
     position: relative;
-    right: 10em;
+    right: 50em;
+    top: -0.75em;
 }
 
 .clear {

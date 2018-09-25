@@ -1,3 +1,75 @@
+/* Start of Grid Layout Style*/
+
+html, * {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    margin: 0;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-third {
+    width: 33.3333%;
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+.one-sixth {
+    width: 16.6666%;
+}
+
+.one-eighth {
+    width: 12.5%;
+}
+
+.offset-one-half {
+    margin-left: 50%;
+}
+
+.offset-one-third {
+    margin-left: 33.3333%;
+}
+
+.offset-two-third {
+    margin-left: 66.6666%;
+}
+
+.offset-one-fourth {
+    margin-left: 25%;
+}
+
+.offset-one-eighth {
+    margin-left: 12.5%;
+}
+
+/*End of Grid Layout Style*/
+
+
+
 /*Whole page*/
 
 body {
@@ -22,15 +94,22 @@ hr {
     color: #ff0000;
 }
 
+.large-space {
+    margin-bottom: 4em;
+}
+
 .space {
     margin-bottom: 2.3em;
+}
+
+code {
+
 }
 
 /*Top of page*/
 
 header {
     background-color: rgb(221, 46, 57);
-
     padding: 85px 0 50px 0;
     color: #ffffff;
 }
@@ -74,15 +153,25 @@ header a {
 
 /*Middle section*/
 
+h2 {
+    font-size: 33px;
+}
+
 .intro {
     margin-top: 60px;
 }
 
+.intro-video {
+    text-decoration: none;
+    color: red;
+}
 
-
-
-
+.ready-started {
+    background-color: rgb(221, 46, 57);
+    color: #ffffff;
+}
 
 
 
 /*Footer Section*/
+

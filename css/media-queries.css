@@ -1,7 +1,7 @@
 /*Entire Page*/
 
 body {
-    width: 365px;
+
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
@@ -82,7 +82,6 @@ span img {
 @media screen and (min-width:500px) {
     body {
         width: 934px;
-        height: 1210px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;

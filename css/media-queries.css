@@ -8,6 +8,8 @@
     clear: both;
 }
 
+/*Mobile Version*/
+
 /*Entire Page*/
 
 body {
@@ -95,7 +97,6 @@ span img {
     }
 
     .column {
-
         margin: 0 auto;
         float: left;
         box-sizing: border-box;
@@ -105,16 +106,8 @@ span img {
         width: 50%;
     }
 
-    .one-third {
-        width: 33.3333%;
-    }
-
     .one-fourth {
         width: 25%;
-    }
-
-    .one-eighth {
-        width: 12.5%;
     }
 
     .offset-one-eighth {

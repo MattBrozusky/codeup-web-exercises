@@ -33,7 +33,6 @@ header {
 }
 
 
-
 /*Middle of page*/
 
 .small-indent {
@@ -57,17 +56,6 @@ header {
     margin-left: 2em;
 }
 
-.emergency-contact {
-    float: right;
-    position: relative;
-    right: 50em;
-    top: -0.75em;
-}
-
-.clear {
-    margin-top: 6em;
-    clear: right;
-}
 
 
 

@@ -103,7 +103,8 @@ hr {
 }
 
 code {
-
+    background-color: rgb(250, 241, 244);
+    color: rgb(213, 0, 69);
 }
 
 /*Top of page*/
@@ -123,7 +124,8 @@ header {
     border-radius: 2px;
 }
 
-.purchase {
+a.purchase {
+    color: white;
     border: 1px solid white;
     text-decoration: none;
     padding: 15px 30px;
@@ -169,6 +171,20 @@ h2 {
 .ready-started {
     background-color: rgb(221, 46, 57);
     color: #ffffff;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+.p-margin {
+    margin-top: 7px;
+}
+
+.text-section {
+    text-align: left;
 }
 
 

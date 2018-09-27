@@ -37,7 +37,7 @@
             </div>
         </nav>
         <div class="container p-0 mt-3">
-            <div class="jumbotron d-none d-md-block">
+            <div class="jumbotron d-none d-md-block px-0">
                 <h1 class="display-4 text-center font-weight-bold">Welcome to Pizza World!</h1>
             </div>
         </div>
@@ -57,8 +57,13 @@
                     </ul>
                 </div>
 
+
+            <form method="POST" action="http://request-inspector.glitch.me/">
             <div class="tab-content">
-                <!--Crust and Size-->
+
+                <!------------
+                Crust and Size
+                ------------->
                 <div class="card tab-pane active border border-dark my-5" role="tabpanel" id="size-crust">
                     <div class="card-header bg-primary text-white">
                         Choose size and crust
@@ -74,7 +79,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="hand-tossed1">
+                                        <input type="radio" name="hand-tossed" value="hand-tossed1" id="hand-tossed1">
                                     </div>
                                     <label class="form-check-label" for="hand-tossed1">
                                         Small (10")
@@ -84,7 +89,7 @@
                             <div class="input-group border border-muted py-2 ">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="hand-tossed2">
+                                        <input type="radio" name="hand-tossed" value="hand-tossed2" id="hand-tossed2">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="hand-tossed2">
@@ -102,7 +107,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="crispy-thin1">
+                                        <input type="radio" name="crispy12" value="crispy12" id="crispy-thin1">
                                     </div>
                                     <label class="form-check-label" for="crispy-thin1">
                                         Medium (12")
@@ -112,7 +117,7 @@
                             <div class="input-group border border-muted py-2 ">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="crispy-thin2">
+                                        <input type="radio" name="crispy14" value="crispy14" id="crispy-thin2">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="crispy-thin2">
@@ -126,8 +131,9 @@
                     </div>
                 </div>
 
-
-                <!--Cheese and Sauce-->
+                <!--------------
+                Cheese and Sauce
+                --------------->
                 <div class="card tab-pane active my-5 border border-dark" role="tabpanel" id="cheese-sauce">
                     <div class="card-header bg-primary text-white">
                         Choose Cheese and Sauce
@@ -139,11 +145,11 @@
                             </div>
                             <div class="form-group px-3 pt-2 border-top border-muted">
                                 <label for="cheese-selector">How Much?</label>
-                                <select class="form-control" id="cheese-selector">
-                                    <option>Light</option>
-                                    <option>Normal</option>
-                                    <option>Extra</option>
-                                    <option>Double</option>
+                                <select class="form-control" id="cheese-selector" type="text">
+                                    <option value="light">Light</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="extra">Extra</option>
+                                    <option value="double">Double</option>
                                 </select>
                             </div>
                         </div>
@@ -154,18 +160,18 @@
                             <div class="form-group px-3 pt-2 border-top border-muted">
                                 <label for="sauce-selector">How Much?</label>
                                 <select class="form-control" id="sauce-selector">
-                                    <option>Tomato sauce</option>
-                                    <option>Marinara sauce</option>
-                                    <option>BBQ Sauce</option>
-                                    <option>Alfredo Sauce</option>
+                                    <option value="tomato">Tomato sauce</option>
+                                    <option value="marinara">Marinara sauce</option>
+                                    <option value="bbq">BBQ Sauce</option>
+                                    <option value="alfredo">Alfredo Sauce</option>
                                 </select>
                             </div>
                             <div class="form-group px-3 pt-2 border-top border-muted">
                                 <label for="sauce-selector2">How Much?</label>
-                                <select class="form-control" id="sauce-selector2">
-                                    <option>Light</option>
-                                    <option>Normal</option>
-                                    <option>Extra</option>
+                                <select class="form-control" id="sauce-selector2" type="text">
+                                    <option value="light-sauce">Light</option>
+                                    <option value="normal-sauce">Normal</option>
+                                    <option value="extra-sauce">Extra</option>
                                 </select>
                             </div>
                         </div>
@@ -176,8 +182,9 @@
                     </div>
                 </div>
 
-
-                <!--Toppings-->
+                <!-------
+                Toppings
+                -------->
                 <div class="card tab-pane active border border-dark my-5" role="tabpanel" id="toppings">
                     <div class="card-header bg-primary text-white">
                         Choose Toppings
@@ -190,7 +197,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="meat1">
+                                        <input type="radio" name="hand-tossed" id="meat1" value="beef">
                                     </div>
                                     <label class="form-check-label" for="meat1">
                                         Beef
@@ -200,7 +207,7 @@
                             <div class="input-group border border-muted py-2 ">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="meat2">
+                                        <input type="radio" name="hand-tossed" id="meat2" value="ham">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="meat2">
@@ -210,7 +217,7 @@
                             <div class="input-group border border-muted py-2 ">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="meat3">
+                                        <input type="radio" name="hand-tossed" id="meat3" value="philly steak">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="meat3">
@@ -220,7 +227,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="radio" name="hand-tossed" id="meat4">
+                                        <input type="radio" name="hand-tossed" id="meat4" value="bacon">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="meat4">
@@ -235,7 +242,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="checkbox" id="non-meat1">
+                                        <input type="checkbox" id="non-meat1" value="green-peppers">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="non-meat1">
@@ -245,7 +252,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="checkbox" id="non-meat2">
+                                        <input type="checkbox" id="non-meat2" value="mushrooms">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="non-meat2">
@@ -255,7 +262,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="checkbox" id="non-meat3">
+                                        <input type="checkbox" id="non-meat3" value="onions">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="non-meat3">
@@ -265,7 +272,7 @@
                             <div class="input-group border border-muted py-2">
                                 <div class="input-group-prepend ml-2">
                                     <div class="input-group-text bg-white rounded-0 border-0">
-                                        <input type="checkbox" id="non-meat4">
+                                        <input type="checkbox" id="non-meat4" value="jalepeno">
                                     </div>
                                 </div>
                                 <label class="form-check-label" for="non-meat4">
@@ -276,12 +283,13 @@
                     </div>
 
                     <div class="card-footer text-right">
-                        <a href="#" class="btn btn-primary">
+                        <button type="submit" href="#" class="btn btn-primary">
                             Checkout <i class="fas fa-shopping-cart"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

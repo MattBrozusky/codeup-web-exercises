@@ -93,7 +93,7 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     #sidebar {
         margin-left: -250px;
     }
@@ -121,6 +121,28 @@ hr {
     float: left;
 }
 
+.hr-top {
+    position: relative;
+    left: -14px;
+}
+
 .bg-lightgrey {
     background-color: lightgrey;
 }
+
+.red-background {
+    background: rgb(228, 0, 52);
+}
+
+.per-room {
+    font-size: smaller;
+}
+
+.red-bar {
+    position: absolute;
+    top: 60px;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(228, 0, 52);
+}
+

@@ -1,0 +1,276 @@
+/*Font Style*/
+
+body {
+    background-color: lightgrey;
+}
+
+h1 h2 h3 a {
+    font-family: 'Anton', sans-serif;
+}
+
+h2 {
+  /*  font-size: 38px;
+    text-shadow: 2px 2px 5px rgb(0, 176, 173);  */
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 50px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+h3 {
+    font-size: 28px;
+    text-shadow: 2px 2px 5px rgb(0, 176, 173);
+}
+
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+/*Navigation Bar */
+
+
+.whitebar {
+    background-color: white;
+    height: 70px;
+    margin-top: 30px;
+    position: absolute;
+    width: 100%;
+}
+
+.wordposition {
+    position: relative;
+    top: -10px;
+}
+a {
+    color: black;
+}
+/* Failed NAV attempts
+
+
+@media only screen and (max-width: 768px) {
+
+    .logo {
+        top: -25px;
+    }
+
+    .logoalign {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .smnavmove {
+        position: relative;
+        top: -50px;
+    }
+
+    .smtitlemove {
+        position: relative;
+        top: -30px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .flexcontainer{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logoalign {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        top: -75px;
+        float: left;
+    }
+}
+
+*/
+
+/*Featured and news feed*/
+
+.featuredrow {
+    width: 70%;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.tweetimg {
+    width: 50px;
+    height: 50px;
+}
+
+/*Circle Styling*/
+
+.circle-size {
+    height: 105px;
+    width: 105px;
+}
+
+.design-circle {
+    border: 7px solid white;
+}
+
+.design-circle span {
+    position: relative;
+    top: 30px;
+}
+
+/*google text move*/
+
+.leftmvgoogle {
+    left: 10px;
+}
+
+
+.leftmv {
+    left: 15px;
+}
+
+/*Small Circle Styling*/
+
+.small-circle-size {
+    height: 18px;
+    width: 18px;
+    margin: 1px;
+}
+
+.small-design-circle span {
+    position: relative;
+    left: 4.5px;
+    top: -3px;
+}
+
+
+
+.red {
+    background-color: #E6563B;
+}
+
+.orange {
+    background-color: #EB9D3A;
+}
+
+.green {
+    background-color: #7CB06C;
+}
+
+.blue {
+    background-color: #00ABA9;
+}
+
+.lightgrey {
+    background-color: lightgrey;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container hr {
+        visibility: hidden;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 750px){
+
+    .container hr {
+        width: 75%;
+        height: 4px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .container hr {
+        width: 100%;
+        height: 4px;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .header-center {
+        text-align: center;
+    }
+}
+
+.twitter-relative {
+    position: relative;
+    right: -20px;
+}
+
+.twitter-text-relative {
+    position: relative;
+    right: -20px;
+    top: 10px;
+}
+
+.img-border {
+    border: 5px solid darkgrey;
+}
+
+.man-img {
+    height: 95%;
+}
+
+.hover a:hover {
+    color: rgb(0, 176, 173);
+    background: #000;
+}
+
+
+/* test stuff */
+
+.drip {
+    color: #EEE;
+    text-shadow: 4px 4px 1px #300000;
+}
+
+.elegantshadow {
+    color: black;
+    letter-spacing: .15em;
+    text-shadow:
+            1px -1px 0 #005561,
+            -1px 2px 1px #005964,
+            -2px 4px 1px #005D68,
+            -3px 6px 1px #00626B,
+            -4px 8px 1px #002120,
+            -5px 10px 1px #002929,
+            -6px 12px 1px #003231,
+            -7px 14px 1px #003A39,
+            -8px 16px 1px #004341,
+            -9px 18px 1px #004B4A,
+            -10px 20px 1px #005352,
+            -11px 22px 1px #005C5A,
+            -12px 24px 1px #006462,
+            -13px 26px 1px #006C6B,
+            -14px 28px 1px #007573,
+            -15px 30px 1px #007D7B,
+            -16px 32px 1px #008683,
+            -17px 34px 1px #008E8C,
+            -18px 36px 1px #009694,
+            -19px 38px 1px #009F9C,
+            -20px 40px 1px #00A7A4,
+            -21px 42px 1px #00B0AC;
+}
+
+
+.shadow-circle {
+    box-shadow: -10px 13px 20px rgba(0, 0, 0, 0.75);
+}
+

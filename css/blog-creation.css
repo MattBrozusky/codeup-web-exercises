@@ -1,0 +1,47 @@
+/*Entire Page*/
+
+
+* {
+    border-radius: 0 !important;
+}
+
+.bg-lightgrey {
+    background-color: lightgrey;
+}
+
+.bg-darkgrey {
+    background-color: rgb(97, 97, 97);
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.color-black {
+    color: black;
+    position: relative;
+    top: 24px;
+}
+
+footer {
+    height: 150px;
+}
+
+.tags p {
+    background-color: lightgrey;
+    color: black;
+    margin: 5px;
+    width: auto;
+    float: left;
+    padding: 1px 3px;
+}
+
+.tags p:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.2, 1.25);
+}
+
+.img-size {
+    width: 50px;
+}

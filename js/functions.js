@@ -1,4 +1,4 @@
-/*(function () {*/
+// (function () {
 
 "use strict";
 
@@ -1031,5 +1031,4 @@ function willLoginUser(username, password, age, admin) {
 
 
 
-/*
-})();*/
+/*})();*/

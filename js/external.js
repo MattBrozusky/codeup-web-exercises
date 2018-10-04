@@ -1,3 +1,5 @@
+
+(function() {
 "use strict";
 
 
@@ -95,8 +97,9 @@ if (enrolled) {
     alert("You are enrolled in the class!")
 }   else {
     alert("You are not enrolled in the class :(")
-}*/
+}
 
+*/
 
 
 
@@ -323,6 +326,38 @@ alert("Each person gets " + realNumberOfSlicesPerPerson + " pieces of pizza. The
 
 */
 
+
+
+
+
+
+/*make a function, hasLetterA() that takes in a string and returns true if the string contains "a" and false if it does not; test the function*/
+
+
+
+
+
+/*
+    function hasLetterA(input) {
+        var indexOfa = input.toLowerCase().indexOf("a");
+        return indexOfa >= 0;
+    }
+
+
+    console.log(hasLetterA("dya"));
+
+*/
+
+
+
+
+
+
+
+
+
+
+})();
 
 
 

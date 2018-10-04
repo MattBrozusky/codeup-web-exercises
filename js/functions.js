@@ -12,7 +12,7 @@
  */
 
 
-
+//
 // function sayHello(name) {
 //     return "Hello " + name + "!";
 // }
@@ -33,8 +33,8 @@
 //
 // var helloMessage = sayHello("Matthew");
 // console.log(helloMessage);
-
-
+//
+//
 
 
 /**
@@ -43,6 +43,9 @@
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+
+
 
 // var myName = "Matthew";
 // console.log(sayHello(myName));
@@ -145,16 +148,16 @@ var random = Math.floor((Math.random() * 3) + 1);
 
 
 
-
-function applyDiscount(originalPrice, discount) {
-    var amountTakenOff = parseFloat(originalPrice) * parseFloat(discount);
-    return originalPrice - amountTakenOff;
-
-}
-
-
-console.log(applyDiscount(100, 0.2));
-
+//
+// function applyDiscount(originalPrice, discount) {
+//     var amountTakenOff = parseFloat(originalPrice) * parseFloat(discount);
+//     return originalPrice - amountTakenOff;
+//
+// }
+//
+//
+// console.log(applyDiscount(100, 0.2));
+//
 
 
 
@@ -345,11 +348,11 @@ console.log(applyDiscount(100, 0.2));
 
 // Write a function called `add(a, b)` that returns the sum of a and b
 
-
-function add(a, b) {
-    return a + b;
-
-}
+//
+// function add(a, b) {
+//     return a + b;
+//
+// }
 
 
 
@@ -357,20 +360,20 @@ function add(a, b) {
 // Write a function called `subtract(a, b)` that return the difference between the two inputs.
 
 
-function subtract(a, b) {
-    return a - b;
-
-}
+// function subtract(a, b) {
+//     return a - b;
+//
+// }
 
 
 
 // Write `multiply(a, b)` function that returns the product
 
 
-function multiply(a, b) {
-    return a * b;
-
-}
+// function multiply(a, b) {
+//     return a * b;
+//
+// }
 
 
 
@@ -380,10 +383,10 @@ function multiply(a, b) {
 
 
 
-function divide(numerator, denominator) {
-    return numerator / denominator;
-
-}
+// function divide(numerator, denominator) {
+//     return numerator / denominator;
+//
+// }
 
 
 
@@ -434,13 +437,596 @@ function divide(numerator, denominator) {
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply.
 // a and b are the two numbers to run that function on.
 
-
+//
 // function doMath(operator, a, b) {
 //     return operator(a, b);
 // }
 //
 // console.log(doMath(multiply, 10, 30));
+
+
+
+
+
+
 //
+// Make a function named isOdd(number)
+
+//
+// function isOdd(number) {
+//     return number % 2 === 1;
+// }
+//
+//
+// console.log(isOdd(4));
+
+
+// Make a function named isEven(number)
+
+
+
+
+// function isEven(number) {
+//     return number % 2 === 0;
+// }
+//
+//
+// console.log(isEven(4));
+
+
+// Make a function named identity(input) that returns the input exactly as provided.
+
+
+// function identity(input) {
+//     return input;
+//
+// }
+
+
+
+
+
+
+//     Make a function named isFive(input)
+
+
+// function isFive(input) {
+//     return 5;
+// }
+
+
+
+
+// Make a function named addFive(input) that adds five to some input.
+
+
+// function addFive(input) {
+//     return input + 5;
+// }
+
+
+
+//     Make a function named isMultipleOfFive(input)
+
+
+// function isMultipleOfFive(input) {
+//     return input % 5 === 0;
+// }
+//
+//
+// console.log(isMultipleOfFive(9));
+
+
+// Make a function named isThree(input)
+
+
+// function isThree(input) {
+//     return 3;
+// }
+
+
+
+// Make a function named isMultipleOfThree(input)
+
+//
+// function isMultipleOfThree(input) {
+//     return input % 3 === 0;
+// }
+//
+// console.log(isMultipleOfThree(4));
+
+
+// Make a function named isMultipleOfThreeAndFive(input)
+
+
+// function isMultipleOfThreeAndFive(input) {
+//     var multipleOfFive = input % 5 === 0;
+//     var multipleOfThree = input % 3 === 0;
+//     return multipleOfFive && multipleOfThree;
+// }
+//
+//
+// console.log(isMultipleOfThreeAndFive(10));
+
+
+// Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+
+
+
+// function isMultipleOf(target, n) {
+//     return target % n === 0;
+// }
+//
+// console.log(isMultipleOf(10, 3));
+
+
+// Make a function named isTrue(boolean)
+
+
+// function isTrue(boolean) {
+//     return true;
+// }
+//
+// console.log(isTrue(100));
+
+
+
+
+
+
+// Make a function named isFalse(boolean)
+
+
+
+// function isFalse(boolean) {
+//     return false;
+// }
+//
+// console.log(isFalse(100));
+
+
+
+
+// Make a function named isTruthy(input), remember that values other than true will behave like true
+
+
+
+//
+// function isTruthy(input) {
+//     return !!input;
+// }
+//
+// console.log(isTruthy(100));
+
+
+// Make a function named isFalsy(input), remember that values other than false behave like false
+
+
+//
+//
+// function isFalsy(input) {
+//     return !input;
+// }
+//
+// console.log(isFalsy(100));
+
+
+
+
+// Make a function named isVowel(letter)
+
+
+
+// function isVowel(letter){
+//     var result = false;
+//     if(letter.toUpperCase() === "A" || letter.toUpperCase() === "E" || letter.toUpperCase() === "I" || letter.toUpperCase() === "O" || letter.toUpperCase() === "U" ) {
+//         result = true;
+//     }
+//     return result;
+// }
+//
+//
+// console.log(isVowel("E"));
+
+
+
+
+
+// Make a function named isConsonant(letter)
+
+
+// function isConsonant(letter){
+//     var result = true;
+//     if(letter.toUpperCase() === "A" || letter.toUpperCase() === "E" || letter.toUpperCase() === "I" || letter.toUpperCase() === "O" || letter.toUpperCase() === "U" ) {
+//         result = false;
+//     }
+//     return result;
+// }
+//
+//
+// console.log(isConsonant("U"));
+
+
+
+
+// Make a function named isCapital(letter)
+
+
+
+// function isCapital(letter) {
+//     return (letter !== letter.toLowerCase()) && (letter === letter.toUpperCase());
+// }
+//
+//
+// console.log(isCapital("A"));
+
+
+// Make a function named isLowerCase(letter)
+
+//
+// function isLower(letter) {
+//     return (letter === letter.toLowerCase()) && (letter !== letter.toUpperCase());
+// }
+//
+//
+// console.log(isLower("A"));
+
+
+// Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+
+
+// function hasLowerCase(string) {
+//     return (/[a-z]/.test(string));
+// }
+//
+//
+// console.log(hasLowerCase("MATTHEW"));
+
+
+// Make a function named isSpace(letter) that returns if a character is a space character
+
+//
+// function isSpace(letter) {
+//     var result = false;
+//
+//     if (letter === " ") {
+//         result = true
+//     }
+//     return result;
+// }
+//
+// console.log(isSpace(""));
+
+
+// Make a function named isZero(number)
+
+
+//
+// function isZero(number) {
+//     return number === 0
+// }
+//
+// console.log(isZero(0));
+
+
+
+
+// Make a function named notZero(input) that returns true if the input is not zero
+
+
+
+//
+// function notZero(number) {
+//     return number !== 0
+// }
+//
+// console.log(notZero(9));
+
+
+// Write a function named lowerCase(string)
+
+
+// function lowerCase(string) {
+//     return string.toLowerCase()
+// }
+//
+// console.log(lowerCase("MATTHEW"));
+
+
+// Write a function named double(n) that returns a number times two
+
+
+// function double(n) {
+//     return n * 2;
+// }
+//
+// console.log(double(4));
+
+
+// Write a function named triple(n) that returns a number times 3
+
+
+// function triple(n) {
+//     return n * 3;
+// }
+
+
+
+
+// Write a function named quadruple(n) that returns a number times 4
+
+
+// function quadruple(n) {
+//     return n * 4;
+// }
+
+
+
+
+// Write a function named half(n) that returns 1/2 of the provided input
+
+
+
+// function half(n) {
+//     return n * 0.5;
+// }
+
+
+
+// Write a function named subtract(a, b) that returns a minus b
+
+// function subtract(a, b) {
+//     return a - b;
+// }
+
+
+
+
+// Write a function named multiply(a, b) that returns the product of a times b
+
+
+// function multiply(a, b) {
+//     return a * b;
+// }
+
+
+
+// Write a function named divide(a, b) that returns a divided by b
+
+
+// function divide(a, b) {
+//     return a / b;
+// }
+
+
+
+// Write a function named remainder(a, b) that returns the remainder after dividing a by b
+
+
+
+// function remainder(a, b) {
+//     return a % b;
+// }
+
+
+
+// Write a function named cube(n) that returns n * n * n
+
+
+// function cube(n) {
+//     return n * n * n;
+// }
+
+
+
+
+
+// Write a function named squareRoot(n) that returns the square root of the input
+
+//
+// function squareRoot(n) {
+//     return Math.sqrt(n);
+// }
+//
+// console.log(squareRoot(4));
+
+
+// Write a function named cubeRoot(n) that returns the cube root of the input
+
+
+
+// function cubeRoot(n) {
+//     return Math.cbrt(n);
+// }
+//
+// console.log(cubeRoot(27));
+
+
+// Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+
+
+//
+// function invertSign(number) {
+//     var result = false;
+//     if (number >= 1) {
+//         result = -number;
+//     }   else if (number <= -1) {
+//         result = -number
+//     }
+//     return result;
+// }
+//
+// console.log(invertSign("hi"));
+
+
+// Write a function named degreesToRadians(number)
+
+
+// function degreesToRadians(number) {
+//     return parseFloat(number / 57.2958).toFixed(2);
+// }
+//
+//
+// console.log(degreesToRadians(360));
+
+
+// Write a function named radiansToDegrees(number)
+
+
+// function radiansToDegrees(number) {
+//     return parseFloat(number * 57.2958).toFixed(2);
+// }
+//
+// console.log(radiansToDegrees(6));
+
+
+// Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+
+
+// function isBlank() {
+//     var input = prompt("Enter what you want.");
+//     return input.split(" ").length -1;
+// }
+//
+//
+// console.log(isBlank());
+
+
+//     Make a function named trim(string) that removes empty spaces before and after the input.
+
+//
+// function trim(string) {
+//     var beforeTrim = string.indexOf(string);
+//     var afterTrim = string.trim();
+//     var final = beforeTrim - (string.indexOf(afterTrim));
+//     return (final * -1) + 1;
+// }
+//
+// console.log(trim("      Matthew      "));
+
+
+
+
+// Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+
+
+// function areaEqual(input1, input2) {
+//     var result = false;
+//     if (input1 === input2) {
+//         result = true;
+//     }
+//     return result;
+// }
+//
+// console.log(areaEqual(5, 7));
+
+
+
+
+
+
+//     Make a function named not(input) returns the input with a flipped boolean
+
+//
+// function not(input) {
+//     return !input;
+// }
+//
+// console.log(not(false));
+
+
+// Make a function named notNot(input) that the negation of the negation of the input.
+
+
+// function notNot(input) {
+//     return !!input;
+// }
+
+
+//     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+
+
+// function and(predictable1, predictable2) {
+//     return predictable1 && predictable2;
+// }
+
+
+
+
+// Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+
+
+// function or(predictable1, predictable2) {
+//     return predictable1 || predictable2;
+// }
+
+
+
+// Write a function called reverseString(string) that reverses a string
+
+
+// function reverseString(string) {
+//     var splitString = string.split("");
+//     var reverseArray = splitString.reverse();
+//     return reverseArray.join("");
+// }
+//
+// console.log(reverseString("matthew"));
+
+
+
+
+// Make a function named absoluteValue(number) that returns the absolute value of a number.
+
+
+// function absoluteValue(number) {
+//     var result = number;
+//     if (number <= -1) {
+//         result = number * -1;
+//     }
+//     return result;
+// }
+//
+// console.log(absoluteValue(40));
+
+
+//     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+
+//
+// function rollDice(sides) {
+//     return Math.floor(Math.random() * sides) + 1;
+// }
+//
+//
+// console.log(rollDice(6));
+
+
+
+
+
+
+
+// Create a function, willLoginUser() that takes in a username string, password string, user age, a boolean indicating if they are an admin.
+// The function will return true if the username is not the same as the password and the user is at least 18 years old.
+// If the user is an admin, they do not have to be a certain age but the password must still not match the username.
+
+
+
+function willLoginUser(username, password, age, admin) {
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
 
 
 

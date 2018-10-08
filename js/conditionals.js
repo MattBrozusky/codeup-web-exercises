@@ -18,43 +18,43 @@
 
 
 
-var numberEnter = confirm("Would you like to enter a number?");
-
-
-function numberNegPos() {
-    return numberVar >= 0;
-}
-
-function numberEven() {
-    return numberVar % 2 === 0;
-}
-
-function numberPlus100() {
-    return parseFloat(numberVar) + 100;
-}
-
-if (numberEnter === true) {
-    var numberVar = prompt("Please enter the number.");
-    if (!isNaN(parseFloat(numberVar)) === true){
-        alert("Your number plus 100 is equal to " + numberPlus100(numberVar));
-
-        if (numberEven(numberEnter) === true) {
-            alert("The number is even.");
-
-        } else {
-            alert("The number is odd.");
-        }
-        if (numberNegPos(numberEnter) === true) {
-            alert("Your number is positive.");
-
-        } else {
-            alert("Your number is negative.");
-        }
-    }
-} else {
-    alert("You did not enter a number...");
-}
-
+// var numberEnter = confirm("Would you like to enter a number?");
+//
+//
+// function numberNegPos() {
+//     return numberVar >= 0;
+// }
+//
+// function numberEven() {
+//     return numberVar % 2 === 0;
+// }
+//
+// function numberPlus100() {
+//     return parseFloat(numberVar) + 100;
+// }
+//
+// if (numberEnter === true) {
+//     var numberVar = prompt("Please enter the number.");
+//     if (!isNaN(parseFloat(numberVar)) === true){
+//         alert("Your number plus 100 is equal to " + numberPlus100(numberVar));
+//
+//         if (numberEven(numberEnter) === true) {
+//             alert("The number is even.");
+//
+//         } else {
+//             alert("The number is odd.");
+//         }
+//         if (numberNegPos(numberEnter) === true) {
+//             alert("Your number is positive.");
+//
+//         } else {
+//             alert("Your number is negative.");
+//         }
+//     }
+// } else {
+//     alert("You did not enter a number...");
+// }
+//
 
 
 
@@ -253,5 +253,329 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //
 // alert("Your price before the discount was " + totalAmount + ". And you price after your discount is " + calculateTotal(luckyNumber, totalAmount) + "!");
 //
+
+
+
+
+
+
+//
+// ================================= CONDITIONALS BONUSES
+// __
+// Write a function makeJustinMessage() that returns the string "It's Justin!" if the input to the function is the string "justin" and "It's not Justin" otherwise.
+//     If the input contains white space or numbers, return the string "INVALID INPUT".
+//     __
+
+
+// function makeJustinMessage(input) {
+//     var result = "It's not Justin";
+//     if (input === "justin") {
+//         result = "It's Justin!";
+//     } else if (!isNaN(input))  {
+//         return "INVALID INPUT";
+//     } else if (input.indexOf(' ') >= 0) {
+//         result = "INVALID INPUT";
+//     } else {
+//         result = "It's not Justin";
+//     }
+//     return result;
+// }
+//
+// console.log(makeJustinMessage("justin"));
+
+
+
+
+
+// Write a function that returns a string describing the action to be taken for a given street light color input. For example, if the function input is the string "red",
+// a message like "STOP!" could be returned from the function. Input should not be case sensitive.
+//     __
+
+
+//
+// function streetLight(input) {
+//     var lightColor = input.toLowerCase();
+//     if (lightColor === "green") {
+//         alert("Drive on through!");
+//     } else if (lightColor === "yellow") {
+//         alert("Start slowing down if you can!");
+//     } else if (lightColor === "red") {
+//         alert("STOP!");
+//     } else {
+//         alert("You didn't tell me an actual color...");
+//     }
+// }
+//
+//
+// streetLight(prompt("What color is the street light?"));
+
+
+
+
+
+// Create a function that simply returns an input as an output. If no input is passed to the function when it is called, return the string "no input provided."
+// __
+
+
+
+
+//
+// function inputToOutput(input) {
+//     if (input === undefined) {
+//         alert("No Input Provided!");
+//     } else {
+//         return input;
+//     }
+// }
+//
+// console.log(inputToOutput("hi"));
+
+
+
+
+
+// Create a function that returns a unique message string for a given digit input. If the input is not a single digit, return the string "too many digits".
+// If the input is not a number, return "invalid input". String digits like "1" or "9" are valid inputs.
+//     __
+
+
+//
+// function digit(input) {
+//     var number = parseFloat(input);
+//     if (isNaN(number)) {
+//         alert("Invalid Input");
+//     } else if (number >= 10 || number <= -10) {
+//         alert("Too many digits!");
+//     } else {
+//         alert("You picked a nice number!");
+//     }
+// }
+//
+//
+// digit(prompt("Please input a number!"));
+
+
+
+
+
+
+// Create a function that prompts a user for their favorite day of the week and alerts a unique message based on the day.
+//     Catch any invalid inputs (not indicating a day of the week).
+// For each day, allow the user to enter the abbreviated day (e.g. 'Monday', 'monday', 'Mon', or 'mon')
+// __
+
+
+
+
+
+//
+// var dayOfWeek = prompt("What day of the week is it?");
+//
+// switch (dayOfWeek.toLowerCase()) {
+//     case "monday":
+//     case "mon":
+//         alert("Today is Monday.");
+//         break;
+//     case "tuesday":
+//     case "tue":
+//         alert("Today is Tuesday.");
+//         break;
+//     case "wednesday":
+//     case "wed":
+//         alert("Today is Wednesday.");
+//         break;
+//     case "thursday":
+//     case "thu":
+//         alert("Today is Thursday.");
+//         break;
+//     case "friday":
+//     case "fri":
+//         alert("Today is Friday.");
+//         break;
+//     case "saturday":
+//     case "sat":
+//         alert("Today is Saturday.");
+//         break;
+//     case "sunday":
+//     case "sun":
+//         alert("Today is Sunday.");
+//         break;
+//     default:
+//         alert("Thats not a day of the week bro...");
+//         break;
+// }
+
+
+
+
+
+
+
+
+
+
+// Create a function that prompts the user for an input and then alerts if the input is a number or not a number.
+// - use an if/else
+//     - refactor to use a ternary operator
+// __
+
+
+
+//
+// function ifNumber(input) {
+//     if (!isNaN(input)) {
+//         alert("This is a number!");
+//     } else {
+//         alert("That is not a number!");
+//     }
+// }
+//
+//
+// console.log(ifNumber("hiu"));
+
+
+
+
+
+// Create a function that prompts a user for a season (Spring, Summer, Fall (or Autumn), Winter).
+// The function then alerts the months available in that season and then asks the user to pick a given month. After selecting the month, alert a unique message for the month.
+// - account for any invalid user input
+// - case of input should not matter
+// - accept both abbreviations and full names of the months
+// __
+
+
+
+//
+// function seasons(input) {
+//     var seasonChoice = input.toLowerCase();
+//     if (seasonChoice === "spring") {
+//         var springMonth = prompt("Choose a spring month.");
+//         switch (springMonth.toLowerCase()) {
+//             case "march":
+//             case "mar":
+//                 alert("March is a cool month.");
+//                 break;
+//             case "april":
+//             case "apr":
+//                 alert("April is a cool month.");
+//                 break;
+//             case "may":
+//                 alert("May is my favorite month.");
+//                 break;
+//             default:
+//                 alert("Thats not a spring month...")
+//         }
+//     } else if (seasonChoice === "summer") {
+//         var summerMonth = prompt("Choose a summer month.");
+//         switch (summerMonth.toLowerCase()) {
+//             case "june":
+//             case "jun":
+//                 alert("June is a cool month.");
+//                 break;
+//             case "july":
+//             case "jul":
+//                 alert("July is a cool month.");
+//                 break;
+//             case "august":
+//             case "aug":
+//                 alert("August is my favorite month.");
+//                 break;
+//             default:
+//                 alert("Thats not a summer month...")
+//         }
+//     } else if (seasonChoice === "fall" || "autumn") {
+//         var fallMonth = prompt("Choose a fall month.");
+//         switch (fallMonth.toLowerCase()) {
+//             case "september":
+//             case "sept":
+//                 alert("September is a cool month.");
+//                 break;
+//             case "october":
+//             case "oct":
+//                 alert("October is a cool month.");
+//                 break;
+//             case "november":
+//             case "nov":
+//                 alert("November is my favorite month.");
+//                 break;
+//             default:
+//                 alert("Thats not a summer month...")
+//         }
+//     } else if (seasonChoice === "winter") {
+//         var winterMonth = prompt("Choose a winter month.");
+//         switch (winterMonth.toLowerCase()) {
+//             case "december":
+//             case "dec":
+//                 alert("December is a cool month.");
+//                 break;
+//             case "january":
+//             case "jan":
+//                 alert("January is a cool month.");
+//                 break;
+//             case "february":
+//             case "feb":
+//                 alert("February is my favorite month.");
+//                 break;
+//             default:
+//                 alert("Thats not a summer month...")
+//         }
+//     } else {
+//         alert("Thats not a season!");
+//     }
+// }
+//
+//
+//
+// seasons(prompt("Please choose a season."));
+
+
+
+
+
+
+// GOLD STAR BONUS
+// Create a distance-unit-conversion application.
+//     Prompt the user for unit of measurement.
+//     Prompt the user for a value.
+//     Prompt the user for a second unit of measurement to convert to.
+//     Possibly define multiple functions to convert: inchesToFeet, feetToMiles, milesToLightYears
+// then the opposite versions: lightYearsToMiles, milesToFeet, feetToInches
+// Use these conversion functions to make the correct unit conversion
+// Potentially, you will need a large switch case to account for the possible unit conversions,
+//     i.e. what conversion functions will need to be called in and in what order.
+//     DOUBLE GOLD STAR BONUS
+//     Allow unit conversion to metric system units
+
+
+
+
+
+do {
+    var unitOfMeasurement = prompt("Please choose a unit of measurement (inches, feet, miles, or lightyears):");
+    var unitOfMeasurementInput = unitOfMeasurement
+} while (unitOfMeasurementInput !== "inches" || "feet" || "miles" || "lightyears");
+
+
+console.log("done");
+
+// do {
+//     var value = prompt("Please choose a unit of value:");
+//
+// } while (parseFloat(value) !== "inches" || "feet" || "miles" || "lightyears"); {
+//     alert("That's not a valid choice!");
+// }
+//
+// do {
+//     var secondUnitOfMeasurement = prompt("Please choose a second unit of measurement different from first one (inches, feet, miles, or lightyears):");
+//
+// } while (secondUnitOfMeasurement.toLowerCase() !== "inches" || "feet" || "miles" || "lightyears" || unitOfMeasurement.toLowerCase()); {
+//     alert("That's not a valid choice!");
+// }
+
+
+
+
+
 
 

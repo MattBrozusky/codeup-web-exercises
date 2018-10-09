@@ -34,7 +34,7 @@
 
 
 // for (var x = 1; x <=10; x++) {
-//     var randomNumber = Math.floor(Math.random() * 200) + 1;
+//     var randomNumber = Math.floor(Math.random() * 180) + 20;
 //     if (randomNumber % 2 === 0) {
 //         console.log(randomNumber + " is even!");
 //         continue;

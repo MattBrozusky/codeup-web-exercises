@@ -83,6 +83,88 @@
 
 
 
+// BONUSES 1:
+// Write a function to toggle all characters in a string: in a given string, toggle all characters to their opposite case. Special characters will not change.
+//     Example input: "aBc12#"
+// Example output: "AbC12#"
+
+
+
+
+
+
+
+// function changeCase(str) {
+//     var str2 = '';
+//
+//     for (var i = 0; i < str.length; i++) {
+//         if (str.charAt(i) === str.charAt(i).toLowerCase()) {
+//             str2 += str.charAt(i).toUpperCase();
+//         } else if (str.charAt(i) === str.charAt(i).toUpperCase()) {
+//             str2 += str.charAt(i).toLowerCase()
+//         } else {
+//             str2 += str.charAt(i);
+//         }
+//     }
+//     console.log(str2);
+// }
+//
+//
+// console.log(changeCase("HeLlO"));
+
+
+
+
+
+
+
+
+// BONUS 2:
+// Write a function that takes a given string appended with a number at the end. The program will check the length of the string to verify the string is equal to the number appended.
+// If the number appended equals the string length, output "Yes". if the number appended does not equal the string length, output "No".
+//     Example Input: "geek5"
+// Example Output: "Yes"
+// Example Input: "codingchallenge25"
+// Example Output: "No"
+
+
+
+
+// function stringNumber(input) {
+//
+//
+//
+//     for (var i = 0; i < input.length; i++) {
+//
+//         if (!isNaN(parseFloat(input.charAt(i)))) {
+//             var number = parseFloat(input.charAt(i));
+//             if (number === input.length) {
+//                 console.log("yes");
+//             } else {
+//                 console.log("No");
+//             }
+//         }
+//
+//     }
+//
+//     console.log(number);
+//
+// }
+//
+// stringNumber("matthewsays11");
+// //
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

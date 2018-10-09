@@ -63,17 +63,11 @@
 
 
 
-// var y = 1;
-//
-// console.log(y);
-//
-//
-// for (var x = 2; x <= 9; x += 1){
-//     y = y * x;
-//     y = y.toString();
-//     console.log(y.repeat(x));
-//     y = 1;
-// }
+for (var x = 1; x <= 9; x += 1){
+
+    console.log(x.toString().repeat(x));
+
+}
 
 
 

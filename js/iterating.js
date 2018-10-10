@@ -61,9 +61,9 @@
 
 
 
-    names.forEach(function (element, index, array) {
-        console.log(element);
-    });
+    // names.forEach(function (element, index, array) {
+    //     console.log(element);
+    // });
 
 
 
@@ -82,25 +82,124 @@
      */
 
 
-    var numberArray = [1, 2, 3, 4, 5];
+    // var numberArray = [1, 2, 3, 4, 5];
+    //
+    // function first() {
+    //     console.log(numberArray[0]);
+    // }
+    //
+    // first();
+    //
+    // function second() {
+    //     console.log(numberArray[1]);
+    // }
+    //
+    // second();
+    //
+    // function fifth() {
+    //     console.log(numberArray[4]);
+    // }
+    //
+    // fifth();
 
-    function first() {
-        console.log(numberArray[0]);
-    }
 
-    first();
 
-    function second() {
-        console.log(numberArray[1]);
-    }
 
-    second();
 
-    function fifth() {
-        console.log(numberArray[4]);
-    }
+//
+// ================================= ARRAY BONUSES
+// 1. Create a function that returns a random day of the week
 
-    fifth();
+
+
+
+//
+// var daysInWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+//
+// function randomDay() {
+//     var randomNumber = Math.ceil(Math.random() * 7) -1 ;
+//     return daysInWeek[randomNumber];
+// }
+//
+// console.log(randomDay());
+
+
+
+
+
+
+
+
+
+// 2. Create a function that takes a single letter and returns what number the letter is in the alphabet. Ignore case.
+
+
+
+
+// var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//
+//
+// function alphabetIndex(letter) {
+//     var letterNoCase = letter.toLowerCase();
+//     return  alphabet.indexOf(letterNoCase) + 1;
+// }
+//
+//
+// console.log(alphabetIndex("Z"));
+
+
+
+
+
+
+// 3. Create a function that returns the longest string in a given array of string elements
+
+
+
+
+
+
+var randomArray = ["banana", "dragon fruit", "apple", "pear"];
+
+
+
+
+
+
+function longestString(array) {
+    var longestString = "";
+
+    array.forEach(function (element) {
+        if (element.length > longestString.length) {
+            longestString = element;
+        }
+
+    });
+
+    return longestString;
+}
+
+console.log(longestString(randomArray));
+
+
+
+
+
+
+
+
+// 4. Create a function that takes in two arrays of number inputs. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
+//     var arr1 = ['bob', 1, true, 1, 2];
+// var arr2 = [2, null, undefined, 0, 2, "apple"]
+// exampleFunction(arr1, arr2) // returns true
+
+
+
+
+
+
+
+
 
 
 

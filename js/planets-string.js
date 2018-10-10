@@ -52,11 +52,11 @@
 
 
 
-function first(array) {
-    return array.slice(0, 1);
-}
-
-console.log(first(planetsArray));
+// function first(array) {
+//     return array.slice(0, 1);
+// }
+//
+// console.log(first(planetsArray));
 
 
 
@@ -64,14 +64,14 @@ console.log(first(planetsArray));
 
 
 
-function secondToLast(array) {
-
-    var almostLast = array.length -2;
-    return array.slice(almostLast, (almostLast + 1));
-
-}
-
-console.log(secondToLast(planetsArray));
+// function secondToLast(array) {
+//
+//     var almostLast = array.length -2;
+//     return array.slice(almostLast, (almostLast + 1));
+//
+// }
+//
+// console.log(secondToLast(planetsArray));
 
 
 
@@ -79,12 +79,12 @@ console.log(secondToLast(planetsArray));
 
 
 
-function rest(array) {
-    array.shift();
-    return array
-}
-
-console.log(rest(planetsArray));
+// function rest(array) {
+//     array.shift();
+//     return array
+// }
+//
+// console.log(rest(planetsArray));
 
 
 
@@ -94,20 +94,20 @@ console.log(rest(planetsArray));
 
 
 
-function getlongestString(array) {
-    var longestString = "";
-
-    array.forEach(function (element) {
-        if (element.length > longestString.length) {
-            longestString = element;
-        }
-
-    });
-
-    return longestString;
-}
-
-console.log(getlongestString(planetsArray));
+// function getlongestString(array) {
+//     var longestString = "";
+//
+//     array.forEach(function (element) {
+//         if (element.length > longestString.length) {
+//             longestString = element;
+//         }
+//
+//     });
+//
+//     return longestString;
+// }
+//
+// console.log(getlongestString(planetsArray));
 
 
 
@@ -119,6 +119,21 @@ console.log(getlongestString(planetsArray));
 // Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.
 
 
+// function getShortestString(array) {
+//     var shortestString = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+//
+//     array.forEach(function (element) {
+//
+//         if (element.length < shortestString.length) {
+//             shortestString = element;
+//         }
+//
+//     });
+//     return shortestString;
+// }
+//
+//
+// console.log(getShortestString(planetsArray));
 
 
 
@@ -127,19 +142,97 @@ console.log(getlongestString(planetsArray));
 
 
 
-// Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
+// Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays.
+// The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
 // Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]
+
+
+
+
+
+// var names = ["john", "jim", "jake", "jill"];
+//
+//
+//
+// function addTwoArrays(array1, array2) {
+//
+//     var split1 = array1.join(", ");
+//     var split2 = array2.join(", ");
+//     var concat = split1 + ", " + split2;
+//     return concat.split(", ");
+//
+// }
+//
+//
+// console.log(addTwoArrays(planetsArray, names));
+
+
+
 
 // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
 // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
 
+
+
+// var numbers = ["1", "2", "2", "2", "3", "3", "1", "4"];
+//
+//
+// var numbersUnique = numbers.filter(function(item, index){
+//     return numbers.indexOf(item) >= index;
+// });
+//
+//
+// console.log(numbersUnique);
+
+
+
+
+
+
 // Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed, but without altering the original array.
+
+
+
+// function reverseArray(array) {
+//     return array.slice().reverse();
+// }
+//
+// console.log(reverseArray(planetsArray));
+//
+// console.log(planetsArray);
+
+
+
 
 // Exercies 7. Write a function named getRandomQuote().
 //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
 //   getRandomQuote should generate a random number between 0 and the array's length minus 1
 //   use the randomly generated number as your index
 //   return a random quote.
+
+
+function getRandomQuote() {
+
+    var randomQuote = ["a", "b", "c", "f", "k", "s", "w"];
+    var number = randomQuote.length;
+    var randomNumber = Math.ceil(Math.random() * number) - 1;
+    return randomQuote.indexOf(randomNumber);
+
+
+
+}
+
+
+console.log(getRandomQuote());
+
+
+
+
+
+
+
+
+
 
 // Exercise 8. Write a function named getIndexesOf() that takes in two arguments.
 // The first argument should be a specific numeral or character

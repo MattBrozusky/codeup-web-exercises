@@ -211,23 +211,19 @@
 //   return a random quote.
 
 
-function getRandomQuote() {
-
-    var randomQuote = ["a", "b", "c", "f", "k", "s", "w"];
-    var number = randomQuote.length;
-    var randomNumber = Math.ceil(Math.random() * number) - 1;
-    return randomQuote.indexOf(randomNumber);
-
-
-
-}
-
-
-console.log(getRandomQuote());
 
 
 
 
+
+// function getRandomQuote() {
+//     var randomQuote = ["a", "b", "c", "f", "k", "s", "w"];
+//     var number = randomQuote.length;
+//     var randomNumber = Math.ceil(Math.random() * number);
+//     return randomQuote[randomNumber];
+// }
+//
+// console.log(getRandomQuote());
 
 
 
@@ -240,6 +236,23 @@ console.log(getRandomQuote());
 // getIndexesOf() should return an array containing all of the indexes of that character in the string
 // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // Example: getIndexesOf("z", "banana") should return an empty array []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

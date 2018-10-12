@@ -1299,130 +1299,146 @@ var profiles = [
 
 
 
-function getProfileCount() {
-    return profiles.length;
-}
+// function getProfileCount() {
+//     return profiles.length;
+// }
+//
+//
+//
+//
+// function getActiveProfiles() {
+//     var totalActive = 0;
+//     profiles.forEach(function (element) {
+//
+//         if (element.isActive) {
+//             totalActive += 1;
+//         }
+//     });
+//     return totalActive;
+// }
+//
+//
+//
+//
+// function sumOfAllBalances() {
+//
+//     var totalBalance = 0;
+//     profiles.forEach(function (element) {
+//
+//         // use .replace
+//         var balance = element.balance.replace("$", "");
+//         balance = balance.replace(",", "");
+//         balance = parseFloat(balance);
+//         totalBalance += balance;
+//
+//     });
+//     return totalBalance;
+// }
+//
+//
+//
+//
+// function getAverageBalance() {
+//     return (sumOfAllBalances() / getProfileCount()).toFixed(2);
+// }
+//
+//
+//
+// function getAverageAge() {
+//
+//     var averageAge = 0;
+//     profiles.forEach(function (element) {
+//
+//         averageAge += element.age;
+//
+//
+//     });
+//     return Math.round(averageAge / getProfileCount());
+// }
+//
+//
+// function getGenderCounts() {
+//     var males = 0;
+//     var females = 0;
+//
+//     profiles.forEach(function (profile) {
+//         if (profile.gender === "male") {
+//             males += 1;
+//         } else if (profile.gender === "female") {
+//             females += 1;
+//         }
+//     });
+//
+//     return {
+//         m: males,
+//         f: females
+//     };
+//
+// }
+//
+//
+// function getAllCompanyNames() {
+//     var companyNames = [];
+//     profiles.forEach(function (profile) {
+//
+//         companyNames.push(profile.company);
+//
+//     });
+//     return companyNames
+// }
+//
+//
+//
+// function getMostCommonEyeColor() {
+//     var eyeGreen = 0;
+//     var eyeBlue = 0;
+//     var eyeBrown = 0;
+//
+//     profiles.forEach(function (profile) {
+//
+//         if (profile.eyeColor === "green") {
+//             eyeGreen += 1;
+//         } else if (profile.eyeColor === "brown") {
+//             eyeBrown += 1;
+//         } else if (profile.eyeColor === "blue") {
+//             eyeBlue += 1;
+//         }
+//     });
+//
+//     if (Math.max(eyeBlue, eyeGreen, eyeBrown) === eyeGreen) {
+//         return "Green"
+//     } else if (Math.max(eyeBlue, eyeGreen, eyeBrown) === eyeBlue) {
+//         return "Blue"
+//     } else if (Math.max(eyeBlue, eyeGreen, eyeBrown) === eyeBrown) {
+//         return "Brown"
+//     }
+// }
+//
+//
+//
+//
+//
+// function getBalancesForActiveAndNonActive() {
+//     var totalNonActiveAccountBalance = 0;
+//     var totalActiveAccountBalance = 0;
+//     profiles.forEach(function (element) {
+//         if (element.isActive) {
+//             var activeAccountBalance = element.balance.replace(",", "");
+//             activeAccountBalance = activeAccountBalance.replace("$", "");
+//             activeAccountBalance = parseFloat(activeAccountBalance);
+//             totalActiveAccountBalance += activeAccountBalance;
+//         } else if (element.isActive === false) {
+//             var nonActiveAccountBalance = element.balance.replace(",", "");
+//             nonActiveAccountBalance = nonActiveAccountBalance.replace("$", "");
+//             nonActiveAccountBalance = parseFloat(nonActiveAccountBalance);
+//             totalNonActiveAccountBalance += nonActiveAccountBalance;
+//         }
+//     });
+//     return "The active accounts total balance is $" + totalActiveAccountBalance.toFixed(2) + ". And the total for non-active accounts balance is $" + totalNonActiveAccountBalance.toFixed(2) + ".";
+// }
 
 
 
-
-function getActiveProfiles() {
-    var totalActive = 0;
-    profiles.forEach(function (element) {
-
-        if (element.isActive) {
-            totalActive += 1;
-        }
-    });
-    return totalActive;
-}
-
-
-
-
-function sumOfAllBalances() {
-
-    var totalBalance = 0;
-    profiles.forEach(function (element) {
-
-        // use .replace
-        var balance = element.balance.replace("$", "");
-        balance = balance.replace(",", "");
-        balance = parseFloat(balance);
-        totalBalance += balance;
-
-    });
-    return totalBalance;
-}
-
-
-
-
-function getAverageBalance() {
-    return (sumOfAllBalances() / getProfileCount()).toFixed(2);
-}
-
-
-
-function getAverageAge() {
-
-    var averageAge = 0;
-    profiles.forEach(function (element) {
-
-        averageAge += element.age;
-
-
-    });
-    return Math.round(averageAge / getProfileCount());
-}
-
-
-function getGenderCounts() {
-    var males = 0;
-    var females = 0;
-    
-    profiles.forEach(function (profile) {
-        if (profile.gender === "male") {
-            males += 1;
-        } else if (profile.gender === "female") {
-            females += 1;
-        }
-    });
-    
-    return {
-        m: males,
-        f: females
-    };
-
-}
-
-
-function getAllCompanyNames() {
-    var companyNames = [];
-    profiles.forEach(function (profile) {
-
-        companyNames.push(profile.company);
-
-    });
-    return companyNames
-}
-
-
-
-function getMostCommonEyeColor() {
-    var eyeGreen = 0;
-    var eyeBlue = 0;
-    var eyeBrown = 0;
-
-    profiles.forEach(function (profile) {
-
-        if (profile.eyeColor === "green") {
-            eyeGreen += 1;
-        } else if (profile.eyeColor === "brown") {
-            eyeBrown += 1;
-        } else if (profile.eyeColor === "blue") {
-            eyeBlue += 1;
-        }
-    });
-
-    if (Math.max(eyeBlue, eyeGreen, eyeBrown) === eyeGreen) {
-        return "Green"
-    } else if (Math.max(eyeBlue, eyeGreen, eyeBrown) === eyeBlue) {
-        return "Blue"
-    } else if (Math.max(eyeBlue, eyeGreen, eyeBrown) === eyeBrown) {
-        return "Brown"
-    }
-}
-
-
-
-
-
-
-
-function getBalancesForActiveAndNonActive() {
-    
-}
 
 
 
@@ -1516,6 +1532,14 @@ function getBalancesForActiveAndNonActive() {
 // ================================= MATH OBJECT BONUS
 // Create an application that will calculate the volume of a building based on user input.
 //     Account for multiple rooms and a user choice of measurement (between imperial or metric).
+
+
+
+
+
+
+
+
 
 
 

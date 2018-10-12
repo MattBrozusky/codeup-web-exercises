@@ -12,7 +12,7 @@
         },
 
         logInfo: function (doRounding) {
-            // TODO: complete this method.
+
             if (doRounding) {
                 var rounded = Math.round(this.getArea());
                 return console.log("Area of a circle with radius: " + this.radius + ", is: " + rounded);

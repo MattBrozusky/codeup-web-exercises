@@ -12,7 +12,7 @@
 
 
 
-    <form action="" method="post" id="form-test">
+    <form action="" method="get" id="form-test">
         <div>
             <label>Item-1
                 <input type="text" id="item-1" class="grocery-list">
@@ -39,7 +39,7 @@
             </label>
         </div>
         <div class="button">
-            <button type="submit" id="submit-button">Submit Your Grocery List</button>
+            <button type="button" id="submit-button">Submit Your Grocery List</button>
         </div>
     </form>
 
@@ -67,23 +67,26 @@
 
         var formTest = document.getElementById("form-test");
 
+
+
         function addGroceryList () {
-            function groceryListFunction () {
-                var groceryList = document.getElementsByClassName("grocery-list");
-                groceryList = Array.from(groceryList);
-                return groceryList
-            }
+
+
+
 
             var newList = document.createElement("ul");
             // and give it some content
 
 
-            for (var i = 0; i < groceryListFunction().length; i++) {
+
+            for (var i = 0; i < Array.from(document.querySelectorAll("grocery-list")).length; i++) {
+                var groceryList = document.getElementsByClassName("grocery-list")[i].value;
+                console.log(groceryList);
                 // Create the list item:
                 var item = document.createElement('li');
 
                 // Set its contents:
-                item.appendChild(document.createTextNode(groceryListFunction()[i]));
+                item.appendChild(document.createTextNode(groceryList[i]));
 
                 // Add it to the list:
                 newList.appendChild(item);
@@ -149,6 +152,62 @@
 
 
 
+
+
+
+
+
+
+
+
+        // ================================= DOM EVENT BONUSES
+        //     BONUS 1 - create a stop watch app
+        //     1) stop watch display that shows the time to the nearest 100th of a second
+        // 2) start button to start the stop watch
+        // 3) reset button to reset the time to zero
+        // 4) pause button to stop the stop watch
+        // Additional Features:
+        //     1) store a list of times in an aside div that are appended to every time the reset button is hit
+        // 2) add delete buttons for each stored time that removes the time from the aside div
+        // 3) add keyboard events to control starting, pausing, and resetting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // BONUS 2 - create a Hangman game
+        // Allow user 1 to enter a random word for user 2 to try to guess.
+        // - display the number of guesses
+        // - display the letters already attempted
+        // - display the word as it is being completed and the letters not already guessed with underscores
+        // - a form should allow the user to type a letter guess
+        // - do not accept inputs that are more than one letter or are not letters (ignore case)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // BONUS 3 - Create a zoomable font size effect with mouse scroll
 
 
 

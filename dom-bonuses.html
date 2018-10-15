@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Bonuses</title>
+</head>
+<body>
+
+
+    <h1 align="center">DOM Bonuses</h1>
+
+
+
+
+    <form action="" method="post" id="form-test">
+        <div>
+            <label>Item-1
+                <input type="text" id="item-1" class="grocery-list">
+            </label>
+        </div>
+        <div>
+            <label>Item-2
+                <input type="text" id="item-2" class="grocery-list">
+            </label>
+        </div>
+        <div>
+            <label>Item-3
+                <input type="text" id="item-3" class="grocery-list">
+            </label>
+        </div>
+        <div>
+            <label>Item-4
+                <input type="text" id="item-4" class="grocery-list">
+            </label>
+        </div>
+        <div>
+            <label>Item-5
+                <input type="text" id="item-5" class="grocery-list">
+            </label>
+        </div>
+        <div class="button">
+            <button type="submit" id="submit-button">Submit Your Grocery List</button>
+        </div>
+    </form>
+
+
+    <div id="list">
+
+    </div>
+
+
+
+
+<script>
+    (function () {
+        "use strict";
+
+        //
+        // ================================= DOM BONUSES
+        //     Complete the following in a file called "dom-bonuses.html"...
+        //         BONUS 1 (grocery list APP)
+        //     Allow the user to enter a certain number of items and then display them on the page.
+        //     - for each item, prompt the user for the name of the item, and store in an array of items.
+        //     - for each item in the array of items create a new li element with the correct text and append to the DOM
+        //     - for a simpler alternative, build an entire HTML string and set the innerHTML of an existing <ul> element
+
+
+        var formTest = document.getElementById("form-test");
+
+        function addGroceryList () {
+            function groceryListFunction () {
+                var groceryList = document.getElementsByClassName("grocery-list");
+                groceryList = Array.from(groceryList);
+                return groceryList
+            }
+
+            var newList = document.createElement("ul");
+            // and give it some content
+
+
+            for (var i = 0; i < groceryListFunction().length; i++) {
+                // Create the list item:
+                var item = document.createElement('li');
+
+                // Set its contents:
+                item.appendChild(document.createTextNode(groceryListFunction()[i]));
+
+                // Add it to the list:
+                newList.appendChild(item);
+
+            }
+
+
+            return document.body.insertBefore(newList, formTest);
+
+
+        }
+
+        var submitButton = document.getElementById("submit-button");
+
+        submitButton.addEventListener("click", addGroceryList);
+
+
+
+
+
+
+
+
+
+
+        //     BONUS 2 (custom styling)
+        //     In the same dom-bonuses.html page, allow the user to select custom styling for the page by setting the background color, font color, and font-family for the page.
+        // Add additional style changes to have fun and experiment!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //         BONUS 3 (profile create form)
+        //     Create a form that will allow the user to enter the following information in text inputs:
+        //         firstName
+        //     lastName
+        //     username
+        //     email
+        //     address
+        //     age
+        //     shortBio
+        //     Create a function, createUserProfileDiv() that when run will grab all data in the form inputs and build a div with the user's entered information and append it to the page.
+        // Test it by running it in the JS console.
+
+
+
+
+
+
+
+
+
+
+
+
+    })();
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Dom Bonuses</title>
 </head>
-<body>
+<body id="entire-page">
 
 
     <h1 align="center">DOM Bonuses</h1>
@@ -48,6 +48,16 @@
 
     </div>
 
+    <label>Select Background Color You Want!
+        <select title="background-color" id="background-color">
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+        </select>
+    </label>
+
 
 
 
@@ -65,43 +75,36 @@
         //     - for a simpler alternative, build an entire HTML string and set the innerHTML of an existing <ul> element
 
 
-        var formTest = document.getElementById("form-test");
 
 
-
-        function addGroceryList () {
-
-
-
-
-            var newList = document.createElement("ul");
-            // and give it some content
-
-
-
-            for (var i = 0; i < Array.from(document.querySelectorAll("grocery-list")).length; i++) {
-                var groceryList = document.getElementsByClassName("grocery-list")[i].value;
-                console.log(groceryList);
-                // Create the list item:
-                var item = document.createElement('li');
-
-                // Set its contents:
-                item.appendChild(document.createTextNode(groceryList[i]));
-
-                // Add it to the list:
-                newList.appendChild(item);
-
-            }
-
-
-            return document.body.insertBefore(newList, formTest);
-
-
-        }
-
-        var submitButton = document.getElementById("submit-button");
-
-        submitButton.addEventListener("click", addGroceryList);
+        // var formTest = document.getElementById("form-test");
+        //
+        //
+        //
+        // function addGroceryList () {
+        //
+        //     var newList = document.createElement("ul");
+        //     // and give it some content
+        //
+        //     for (var i = 0; i < Array.from(document.querySelectorAll("grocery-list")).length; i++) {
+        //         var groceryList = document.getElementsByClassName("grocery-list")[i].value;
+        //         console.log(groceryList);
+        //         // Create the list item:
+        //         var item = document.createElement('li');
+        //
+        //         // Set its contents:
+        //         item.appendChild(document.createTextNode(groceryList[i]));
+        //
+        //         // Add it to the list:
+        //         newList.appendChild(item);
+        //
+        //     }
+        //     return document.body.insertBefore(newList, formTest);
+        // }
+        //
+        // var submitButton = document.getElementById("submit-button");
+        //
+        // submitButton.addEventListener("click", addGroceryList);
 
 
 
@@ -116,9 +119,26 @@
         //     In the same dom-bonuses.html page, allow the user to select custom styling for the page by setting the background color, font color, and font-family for the page.
         // Add additional style changes to have fun and experiment!
 
+        var classNumber = document.getElementById("background-color");
 
 
+        function changeBackgroundColor(first) {
+            var value = first.srcElement.options[first.srcElement.selectedIndex].value;
+            document.getElementById("entire-page").style.backgroundColor = value;
+        }
 
+        classNumber.onchange = changeBackgroundColor;
+
+
+        // <label>Select Background Color You Want!
+        //     <select title="background-color">
+        //         <option value="white">White</option>
+        //         <option value="red">Red</option>
+        //         <option value="blue">Blue</option>
+        //         <option value="green">Green</option>
+        //         <option value="purple">Purple</option>
+        //     </select>
+        // </label>
 
 
 

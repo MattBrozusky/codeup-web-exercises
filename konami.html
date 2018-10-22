@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code Exercise</title>
+</head>
+<body>
+
+
+<h1 align="center">Konami Code</h1>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function () {
+
+        var allowedKeys = {
+            "ArrowUp": "up",
+            "ArrowDown": "down",
+            "ArrowLeft": "left",
+            "ArrowRight": "right",
+            "a": "a",
+            "b": "b"
+        };
+        var konami = ["up", "up", "down", "down", "left", "right", "left", "right", "a", "b"];
+        var konamiCodePosition = 0;
+
+        $(document).keydown(function (e) {
+            e.preventDefault();
+            var key = allowedKeys[e.key];
+            var requiredKey = konami[konamiCodePosition];
+
+            if (key === requiredKey) {
+                konamiCodePosition++;
+
+                if (konamiCodePosition === konami.length) {
+                    goInsane();
+                    konamiCodePosition = 0;
+                }
+
+            } else {
+                konamiCodePosition = 0;
+            }
+
+
+        });
+
+
+        function goInsane() {
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+    });
+</script>
+</body>
+</html>

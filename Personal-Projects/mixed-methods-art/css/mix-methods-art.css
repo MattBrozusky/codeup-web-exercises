@@ -3,11 +3,16 @@
 ------------------------------------------------------*/
 
 
+body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-weight: 700;
+}
 
-
-
-
-
+hr {
+    border: 4px solid #48d6d3;
+    width: 8%;
+    float: left;
+}
 
 
 /* ---------------------------------------------------
@@ -136,8 +141,39 @@ a:focus {
 }
 
 /* ---------------------------------------------------
-    Extra Style
+    Artists Page Style
 ----------------------------------------------------- */
 
+.allison {
+    height: 60vh;
+}
 
-/*f3ffff-000000-e7ea4b-48d6d3-1513a0*/
+.fancy-border {
+    border:6px dashed black;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    box-shadow: 6px 6px 15px;
+}
+
+
+
+/* ---------------------------------------------------
+    Paintings Page Style
+----------------------------------------------------- */
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    float: right;
+}
+
+.left {
+    transform: rotate(135deg);
+    float: left;
+}

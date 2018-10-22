@@ -7,25 +7,36 @@
 <body>
 
 
-    <h1 align="center">Matthew Brozusky</h1>
-    <p align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa eum illo laboriosam perferendis quo saepe, sapiente voluptatibus! Blanditiis doloribus ea earum enim expedita facilis laudantium officiis quaerat sit vero.</p>
+    <h1 align="center" id="main-header">Matthew Brozusky</h1>
+    <p align="center" class="main-text codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa eum illo laboriosam perferendis quo saepe, sapiente voluptatibus! Blanditiis doloribus ea earum enim expedita facilis laudantium officiis quaerat sit vero.</p>
 
+    <ul class="cars codeup">Cars
+        <li class="dodge">Challenger</li>
+        <li class="dodge">Dart</li>
+        <li class="ford">Mustang</li>
+        <li class="ford">Fiesta</li>
+    </ul>
 
+    <div id="weekend">
+        This is what I did this weekend: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem dicta eius eos, est explicabo laborum minus officiis quasi quos totam ut velit veniam, voluptas voluptate? Ex laudantium quo vitae.
+    </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
     "use strict";
     $(document).ready(function () {
 
-        console.log("doc", $(document));
-        alert("Hello Jquery!");
+        // console.log("doc", $(document));
+        // alert("Hello Jquery!");
+        //
+        // alert($("#main-header").html());
 
 
+        // $(".codeup").css("border", "1px solid red");
 
+        $("li").css("font-size", "20px");
 
-
-
-
+        $("h1, p, li").css("border", "1px solid red");
 
 
 

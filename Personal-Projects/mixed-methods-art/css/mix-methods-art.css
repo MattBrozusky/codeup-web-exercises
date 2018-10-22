@@ -15,6 +15,11 @@ hr {
 }
 
 
+/*todo: I need to fix this*/
+.test {
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -161,6 +166,11 @@ a:focus {
     Paintings Page Style
 ----------------------------------------------------- */
 
+.ml-30px {
+    margin-left: 30px;
+}
+
+
 i {
     border: solid black;
     border-width: 0 3px 3px 0;
@@ -177,3 +187,4 @@ i {
     transform: rotate(135deg);
     float: left;
 }
+

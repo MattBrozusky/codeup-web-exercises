@@ -47,7 +47,7 @@
         <!--<dd class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem dicta doloremque quod voluptatem. Amet blanditiis ducimus enim error, facilis harum ipsum laudantium, non officiis ratione sunt suscipit ut veritatis.</dd>-->
     <!--</dl>-->
 
-    <button class="btn ml-5 mb-5 btn-primary" id="super-btn">Submit</button>
+    <!--<button class="btn ml-5 mb-5 btn-primary" id="super-btn">Submit</button>-->
 
     <h3 id="national-parks-heading">National Parks</h3>
     <ul id="national-parks">
@@ -76,6 +76,14 @@
         <li>Everglades</li>
     </ul>
 
+    <div class="lost">
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>X</span>
+    </div>
+
+    <h2>Please register for the site!</h2>
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -92,24 +100,34 @@ $(document).ready(function () {
     // });
 
 
-    $("#super-btn").on("click", function () {
+    // $("#super-btn").on("click", function () {
+    //
+    //     $("ul").eq(0).children().last().css("background", "yellow");
+    //     $("ul").eq(1).children().last().css("background", "yellow");
+    //     $("ul").eq(2).children().last().css("background", "yellow");
+    //     });
+    //
+    // $("h3").on("click", function () {
+    //    $(this).next().children().css("font-weight", "bold");
+    // });
+    //
+    // $("li").on("click", function () {
+    //     $(this).parent().children().first().css("color", "blue");
+    // });
 
-        $("ul").eq(0).children().last().css("background", "yellow");
-        $("ul").eq(1).children().last().css("background", "yellow");
-        $("ul").eq(2).children().last().css("background", "yellow");
-        });
+
+    $("div span").on("click", function () {
+        $(".lost").fadeOut(2000);
+    });
+
+    $("ul").hide();
 
     $("h3").on("click", function () {
-       $(this).next().children().css("font-weight", "bold");
+
+        $(this).next().slideToggle(1000);
     });
 
-    $("li").on("click", function () {
-        $(this).parent().children().first().css("color", "blue");
-    });
-
-
-
-
+    $("h2").hide().delay(8000).fadeIn();
 })
 </script>
 </body>

@@ -26,9 +26,9 @@ $(document).ready(function () {
         }
     });
 
-    $('#carouselExample').carousel({
-        interval: 5000
-    });
+    // $('#carouselExample').carousel({
+    //     interval: 5000
+    // });
 
     $(document).ready(function() {
         /* show lightbox when clicking a thumbnail */
@@ -152,32 +152,38 @@ $(document).ready(function () {
 
     var renderFunctions = {
 
-        renderPainting: function (painting) {
-            var html = '<article class="col-12 col-md-6 col-xl-4 mt-5">';
-            html += '<div class="card">';
-            html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
-            html += '<img class="card-img-top" src="' + painting.imgFile + '" alt="Card image cap">';
-            html += '<div class="card-body">';
-            html += '<p class="card-text">' + painting.description + '</p>';
-            html += '</div>';
-            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right">' + painting.price  + '</h6>';
-            html += '</div>';
-            html += '</article>';
-            return html;
-        },
-
         renderPaintingCarousel: function (painting) {
             var html = '<div class="carousel-item col-md-3">';
+            if (painting.index === 1) {
+                html = '<div class="carousel-item col-md-3 active">';
+            }
             html += '<div class="panel panel-default">';
             html += '<div class="panel-thumbnail">';
-            html += '<a href="#" title="image ' + painting.index + '" class="thumb">';
+            html += '<a href="' + '#' + painting.name + painting.index + '" title="' + painting.name + '" class="thumb">';
             html += '<img class="img-fluid mx-auto d-block" src="'+ painting.imgFile +'" alt="slide 1">';
             html += '</a>';
             html += '</div>';
             html += '</div>';
             html += '</div>';
             return html;
+        },
+
+        renderPainting: function (painting) {
+            var html = '<article class="col-12 col-md-6 col-xl-4 mt-5">';
+            // html += '<a id="'+ painting.name + painting.index + '">';
+            html += '<div class="card">';
+            html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
+            html += '<img class="card-img-top" src="' + painting.imgFile + '" alt="Card image cap">';
+            html += '<div class="card-body">';
+            html += '<p class="card-text">' + painting.description + '</p>';
+            html += '</div>';
+            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right" id="'+ painting.name + painting.index +'">' + painting.price  + '</h6>';
+            html += '</div>';
+            html += '</article>';
+            return html;
         }
+
+// </a>
 
     };
 
@@ -201,6 +207,9 @@ $(document).ready(function () {
 
     $("#img-cards").append(renderPaintings(paintings));
     $("#paintings-carousel").append(renderPaintingsCarousel(paintings));
+
+    $("#" + paintings.name).append('<a href="' + url + '">' + text + '</a>');
+
 
 });
 

@@ -14,11 +14,24 @@ hr {
     float: left;
 }
 
+.current-link {
+    background-color: rgba(255, 255, 255, 0.3);
+}
 
-/*todo: I need to fix this*/
+textarea {
+    resize: none;
+}
+
+.btn-custom {
+    background-color: #48d6d3;
+    color: #ffffff;
+}
+
+    /*todo: I need to fix this*/
 .test {
     background: linear-gradient(to right, #8e9eab, #eef2f3);
 }
+
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -62,7 +75,8 @@ hr {
     display: block;
 }
 
-#sidebar ul li a:hover {
+#sidebar ul li a:hover,
+#top-nav-bar a:hover {
     color: #48d6d3;
     background: #fff;
 }
@@ -79,7 +93,7 @@ a.article:hover {
 
 .top-bar {
     position: absolute;
-    top: 64px;
+    top: 24px;
     height: 66px;
     width: 100%;
     background-color: #48d6d3;
@@ -114,7 +128,7 @@ a:focus {
 
 #content {
     width: calc(100% - 250px);
-    padding: 40px;
+    padding: 0 40px 40px 40px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;

@@ -35,7 +35,7 @@
                 <a href="mma-artists.html">Artists</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a class="current-link" href="#">Contact</a>
             </li>
         </ul>
     </nav>
@@ -54,26 +54,55 @@
                         <a class="navbar-brand text-white" href="#">Mixed Methods Art</a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="mixed-methods-art.html">Home</a>
-                            <a class="nav-item nav-link active" href="paintings-page.html">Paintings</a>
-                            <a class="nav-item nav-link active" href="#">Poems</a>
-                            <a class="nav-item nav-link active" href="mma-artists.html">Artists</a>
-                            <a class="nav-item nav-link active" href="#">Contact<span class="sr-only">(current)</span></a>
+                        <div class="navbar-nav" id="top-nav-bar">
+                            <a class="nav-item nav-link active pl-2" href="mixed-methods-art.html">Home</a>
+                            <a class="nav-item nav-link active pl-2" href="paintings-page.html">Paintings</a>
+                            <a class="nav-item nav-link active pl-2" href="#">Poems</a>
+                            <a class="nav-item nav-link active pl-2" href="mma-artists.html">Artists</a>
+                            <a class="nav-item nav-link active current-link pl-2" href="#">Contact<span class="sr-only">(current)</span></a>
                         </div>
                     </div>
                 </nav>
             </div>
         </section>
 
-
-
-        <div class="container">
-            <header class="container-fluid text-center px-0">
-
+        <section class="container">
+            <header class="row mt-5">
+                <h1>CONTACT US</h1>
             </header>
-        </div>
-
+            <hr class="rounded">
+            <form action="">
+                <div class="row mt-5">
+                    <div class="col-6 offset-3 form-group">
+                            <label for="contact-us-email">EMAIL</label>
+                            <input type="text" class="form-control" id="contact-us-email" placeholder="ENTER EMAIL HERE">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 offset-3 form-group">
+                        <label for="contact-us-subject">SUBJECT</label>
+                        <select id="contact-us-subject" class="form-control">
+                            <option>PRODUCT/PRICING</option>
+                            <option>BILLING</option>
+                            <option>MARKETING</option>
+                            <option>PARTNERSHIPS</option>
+                            <option>WEBSITE SUGGESTION</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 offset-3 form-group">
+                        <label for="exampleFormControlTextarea1">MESSAGE</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 offset-3 form-group">
+                        <input class="btn btn-custom w-100" type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </section>
 
 
 

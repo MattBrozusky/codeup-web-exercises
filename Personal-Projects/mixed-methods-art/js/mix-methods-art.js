@@ -26,22 +26,8 @@ $(document).ready(function () {
         }
     });
 
-    // $('#carouselExample').carousel({
-    //     interval: 5000
-    // });
-
-    $(document).ready(function() {
-        /* show lightbox when clicking a thumbnail */
-        $('a.thumb').click(function(event){
-            event.preventDefault();
-            var content = $('.modal-body');
-            content.empty();
-            var title = $(this).attr("title");
-            $('.modal-title').html(title);
-            content.html($(this).html());
-            $(".modal-profile").modal({show:true});
-        });
-
+    $('#carouselExample').carousel({
+        interval: 5000
     });
 
 
@@ -170,20 +156,20 @@ $(document).ready(function () {
 
         renderPainting: function (painting) {
             var html = '<article class="col-12 col-md-6 col-xl-4 mt-5">';
-            // html += '<a id="'+ painting.name + painting.index + '">';
+            html += '<a id="'+ painting.name + painting.index + '">';
             html += '<div class="card">';
             html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
             html += '<img class="card-img-top" src="' + painting.imgFile + '" alt="Card image cap">';
             html += '<div class="card-body">';
             html += '<p class="card-text">' + painting.description + '</p>';
             html += '</div>';
-            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right" id="'+ painting.name + painting.index +'">' + painting.price  + '</h6>';
-            html += '</div>';
+            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right">' + painting.price  + '</h6>';
+            html += '</div></a>';
             html += '</article>';
             return html;
         }
 
-// </a>
+
 
     };
 
@@ -204,12 +190,16 @@ $(document).ready(function () {
         return html;
     }
 
+    $(document).on('click', '.smooth-scroll a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
 
     $("#img-cards").append(renderPaintings(paintings));
     $("#paintings-carousel").append(renderPaintingsCarousel(paintings));
-
-    $("#" + paintings.name).append('<a href="' + url + '">' + text + '</a>');
-
 
 });
 

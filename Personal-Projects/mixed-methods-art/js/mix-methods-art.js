@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
 
     $('#carouselExample').carousel({
-        interval: 5000
+        interval: 3000
     });
 
 
@@ -95,7 +95,7 @@ $(document).ready(function () {
             index: 9,
             imgFile: '//via.placeholder.com/600x400?text=8',
             price: 9,
-            name: 'New Orleans',
+            name: 'New Orleans go',
             description: 'dark'
         },
         {
@@ -139,13 +139,16 @@ $(document).ready(function () {
     var renderFunctions = {
 
         renderPaintingCarousel: function (painting) {
+            var paintingName = painting.name.split(" ");
+            paintingName = paintingName.join("");
             var html = '<div class="carousel-item col-md-3">';
             if (painting.index === 1) {
                 html = '<div class="carousel-item col-md-3 active">';
             }
+
             html += '<div class="panel panel-default">';
             html += '<div class="panel-thumbnail">';
-            html += '<a href="' + '#' + painting.name + painting.index + '" title="' + painting.name + '" class="thumb">';
+            html += '<a href="' + '#' + paintingName + painting.index + '" title="' + paintingName + '" class="thumb">';
             html += '<img class="img-fluid mx-auto d-block" src="'+ painting.imgFile +'" alt="slide 1">';
             html += '</a>';
             html += '</div>';
@@ -155,8 +158,10 @@ $(document).ready(function () {
         },
 
         renderPainting: function (painting) {
+            var paintingName = painting.name.split(" ");
+            paintingName = paintingName.join("");
             var html = '<article class="col-12 col-md-6 col-xl-4 mt-5">';
-            html += '<a id="'+ painting.name + painting.index + '">';
+            html += '<a id="'+ paintingName + painting.index + '">';
             html += '<div class="card">';
             html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
             html += '<img class="card-img-top" src="' + painting.imgFile + '" alt="Card image cap">';
@@ -195,7 +200,7 @@ $(document).ready(function () {
 
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
+        }, 600);
     });
 
     $("#img-cards").append(renderPaintings(paintings));

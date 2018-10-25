@@ -274,7 +274,11 @@ a:focus {
 #profile-grid .img-rounded {
     border-radius: 4px 4px 0 0;
 }
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+}
 
 
 /* ---------------------------------------------------

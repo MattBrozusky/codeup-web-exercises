@@ -1,0 +1,12 @@
+hr {
+    border: 1px solid black;
+}
+
+.weather-header {
+    font-weight: bold;
+}
+
+#map {
+    height: 700px;
+    width: 900px;
+}

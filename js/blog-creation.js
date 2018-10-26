@@ -11,6 +11,10 @@ $(document).ready(function () {
     }
     refreshBlogPost();
 
+    $("#refresh-posts").on("click", function () {
+        refreshBlogPost()
+    });
+
 
     function createBlogPost(entries) {
         var blogHTML = "";

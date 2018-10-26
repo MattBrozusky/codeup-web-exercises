@@ -35,106 +35,107 @@ $(document).ready(function () {
 // Paintings Card Creations JS//
 //-----------------
 
-    var paintings = [{
-            index: 1,
-            imgFile: '//via.placeholder.com/600x400?text=2',
-            price: 1,
-            name: 'Light City',
-            description: 'light'
-        },
-        {
-            index: 2,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 2,
-            name: 'Half City',
-            description: 'light'
-        },
-        {
-            index: 3,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 3,
-            name: 'Cinnamon',
-            description: 'light'
-        },
-        {
-            index: 4,
-            imgFile: '//via.placeholder.com/600x400?text=3',
-            price: 4,
-            name: 'City',
-            description: 'medium'
-        },
-        {
-            index: 5,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 5,
-            name: 'American',
-            description: 'medium'
-        },
-        {
-            index: 6,
-            imgFile: '//via.placeholder.com/600x400?text=4',
-            price: 6,
-            name: 'Breakfast',
-            description: 'medium'
-        },
-        {
-            index: 7,
-            imgFile: '//via.placeholder.com/600x400?text=5',
-            price: 7,
-            name: 'High',
-            description: 'dark'
-        },
-        {
-            index: 8,
-            imgFile: '//via.placeholder.com/600x400?text=6',
-            price: 8,
-            name: 'Continental',
-            description: 'dark'
-        },
-        {
-            index: 9,
-            imgFile: '//via.placeholder.com/600x400?text=8',
-            price: 9,
-            name: 'New Orleans go',
-            description: 'dark'
-        },
-        {
-            index: 10,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 10,
-            name: 'European',
-            description: 'dark'
-        },
-        {
-            index: 11,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 11,
-            name: 'Espresso',
-            description: 'dark'
-        },
-        {
-            index: 12,
-            imgFile: '//via.placeholder.com/600x400?text=1',
-            price: 12,
-            name: 'Viennese',
-            description: 'dark'
-        },
-        {
-            index: 13,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 13,
-            name: 'Italian',
-            description: 'dark'
-        },
-        {
-            index: 14,
-            imgFile: '../img/mma-placeholder.jpg',
-            price: 14,
-            name: 'French',
-            description: 'dark'
-        }
-    ];
+    // var paintings = [{
+    //         index: 1,
+    //         imgFile: '//via.placeholder.com/600x400?text=2',
+    //         price: 1,
+    //         name: 'Light City',
+    //         description: 'light'
+    //     },
+    //     {
+    //         index: 2,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 2,
+    //         name: 'Half City',
+    //         description: 'light'
+    //     },
+    //     {
+    //         index: 3,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 3,
+    //         name: 'Cinnamon',
+    //         description: 'light'
+    //     },
+    //     {
+    //         index: 4,
+    //         imgFile: '//via.placeholder.com/600x400?text=3',
+    //         price: 4,
+    //         name: 'City',
+    //         description: 'medium'
+    //     },
+    //     {
+    //         index: 5,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 5,
+    //         name: 'American',
+    //         description: 'medium'
+    //     },
+    //     {
+    //         index: 6,
+    //         imgFile: '//via.placeholder.com/600x400?text=4',
+    //         price: 6,
+    //         name: 'Breakfast',
+    //         description: 'medium'
+    //     },
+    //     {
+    //         index: 7,
+    //         imgFile: '//via.placeholder.com/600x400?text=5',
+    //         price: 7,
+    //         name: 'High',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 8,
+    //         imgFile: '//via.placeholder.com/600x400?text=6',
+    //         price: 8,
+    //         name: 'Continental',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 9,
+    //         imgFile: '//via.placeholder.com/600x400?text=8',
+    //         price: 9,
+    //         name: 'New Orleans go',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 10,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 10,
+    //         name: 'European',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 11,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 11,
+    //         name: 'Espresso',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 12,
+    //         imgFile: '//via.placeholder.com/600x400?text=1',
+    //         price: 12,
+    //         name: 'Viennese',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 13,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 13,
+    //         name: 'Italian',
+    //         description: 'dark'
+    //     },
+    //     {
+    //         index: 14,
+    //         imgFile: '../img/mma-placeholder.jpg',
+    //         price: 14,
+    //         name: 'French',
+    //         description: 'dark'
+    //     }
+    // ];
 
+    var paintings =
 
     var renderFunctions = {
 
@@ -212,20 +213,38 @@ $(document).ready(function () {
 // Home Page JS//
 //----------------------------
 
+    function homePageCarouselHide() {
+        $("#carouselExampleIndicators2").hide();
+        $("#carouselExampleIndicators").hide();
+
+
+        $("#poems-btn").on("click", function () {
+
+            $(this).next().slideToggle(1000);
+        });
+
+        $("#paintings-btn").on("click", function () {
+
+            $(this).next().slideToggle(1000);
+        });
+    }
 
 
 
-    $("#carouselExampleIndicators2").hide();
-    $("#carouselExampleIndicators").hide();
 
-    $("#poems-btn").on("click", function () {
+    function renderHomePagePictures() {
 
-        $(this).next().slideToggle(1000);
-    });
-    $("#paintings-btn").on("click", function () {
 
-        $(this).next().slideToggle(1000);
-    });
+
+
+
+
+    }
+
+
+
+
+
 
 
 

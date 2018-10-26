@@ -167,3 +167,9 @@ a:focus {
 a h3 {
     text-decoration: underline;
 }
+
+h6 {
+    font-size: small;
+    text-decoration: underline;
+    color: #26aba8;
+}

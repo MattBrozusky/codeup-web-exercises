@@ -30,7 +30,7 @@ $(document).ready(function () {
             blogHTML += '<div class="input-group w-25 float-left">';
             blogHTML += '<a href="#" class="btn text-left bg-black text-white mt-4">Read More ></a>';
             blogHTML += '</div>';
-            blogHTML += '<a href="#" class="btn float-right color-black">Comments<span class="badge bg-black ml-2 text-white">4</span></a>';
+            blogHTML += '<a href="#" class="btn float-right color-black">Comments<span class="badge bg-black ml-2 text-white">6</span></a>';
             blogHTML += '</div>';
             blogHTML += '</div>';
             blogHTML += '</article>';

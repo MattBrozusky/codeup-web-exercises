@@ -206,6 +206,29 @@ $(document).ready(function () {
     $("#img-cards").append(renderPaintings(paintings));
     $("#paintings-carousel").append(renderPaintingsCarousel(paintings));
 
+
+
+//---------------------------
+// Home Page JS//
+//----------------------------
+
+
+
+
+    $("#carouselExampleIndicators2").hide();
+    $("#carouselExampleIndicators").hide();
+
+    $("#poems-btn").on("click", function () {
+
+        $(this).next().slideToggle(1000);
+    });
+    $("#paintings-btn").on("click", function () {
+
+        $(this).next().slideToggle(1000);
+    });
+
+
+
 });
 
 

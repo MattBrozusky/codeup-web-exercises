@@ -30,112 +30,26 @@ $(document).ready(function () {
         interval: 3000
     });
 
+//------------------------
+// Grabbing all Store Data//
+//-------------------------
+
+    function getStoreData() {
+        $.get("data/paintings-poems.json", {
+
+        }).done(function (data) {
+            $("#img-cards").append(renderPaintings(data[0]));
+            $("#paintings-carousel").append(renderPaintingsCarousel(data[0]));
+            $("#carouselExampleIndicators").append(renderHomePagePictures(getRandom(data[0], 3)));
+        });
+    }
+    getStoreData();
+
 
 //-----------------
 // Paintings Card Creations JS//
 //-----------------
 
-    // var paintings = [{
-    //         index: 1,
-    //         imgFile: '//via.placeholder.com/600x400?text=2',
-    //         price: 1,
-    //         name: 'Light City',
-    //         description: 'light'
-    //     },
-    //     {
-    //         index: 2,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 2,
-    //         name: 'Half City',
-    //         description: 'light'
-    //     },
-    //     {
-    //         index: 3,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 3,
-    //         name: 'Cinnamon',
-    //         description: 'light'
-    //     },
-    //     {
-    //         index: 4,
-    //         imgFile: '//via.placeholder.com/600x400?text=3',
-    //         price: 4,
-    //         name: 'City',
-    //         description: 'medium'
-    //     },
-    //     {
-    //         index: 5,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 5,
-    //         name: 'American',
-    //         description: 'medium'
-    //     },
-    //     {
-    //         index: 6,
-    //         imgFile: '//via.placeholder.com/600x400?text=4',
-    //         price: 6,
-    //         name: 'Breakfast',
-    //         description: 'medium'
-    //     },
-    //     {
-    //         index: 7,
-    //         imgFile: '//via.placeholder.com/600x400?text=5',
-    //         price: 7,
-    //         name: 'High',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 8,
-    //         imgFile: '//via.placeholder.com/600x400?text=6',
-    //         price: 8,
-    //         name: 'Continental',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 9,
-    //         imgFile: '//via.placeholder.com/600x400?text=8',
-    //         price: 9,
-    //         name: 'New Orleans go',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 10,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 10,
-    //         name: 'European',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 11,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 11,
-    //         name: 'Espresso',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 12,
-    //         imgFile: '//via.placeholder.com/600x400?text=1',
-    //         price: 12,
-    //         name: 'Viennese',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 13,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 13,
-    //         name: 'Italian',
-    //         description: 'dark'
-    //     },
-    //     {
-    //         index: 14,
-    //         imgFile: '../img/mma-placeholder.jpg',
-    //         price: 14,
-    //         name: 'French',
-    //         description: 'dark'
-    //     }
-    // ];
-
-    var paintings =
 
     var renderFunctions = {
 
@@ -169,7 +83,7 @@ $(document).ready(function () {
             html += '<div class="card-body">';
             html += '<p class="card-text">' + painting.description + '</p>';
             html += '</div>';
-            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right">' + painting.price  + '</h6>';
+            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right">$' + painting.price  + '</h6>';
             html += '</div></a>';
             html += '</article>';
             return html;
@@ -204,8 +118,7 @@ $(document).ready(function () {
         }, 600);
     });
 
-    $("#img-cards").append(renderPaintings(paintings));
-    $("#paintings-carousel").append(renderPaintingsCarousel(paintings));
+
 
 
 
@@ -228,18 +141,59 @@ $(document).ready(function () {
             $(this).next().slideToggle(1000);
         });
     }
+    homePageCarouselHide();
 
 
-
-
-    function renderHomePagePictures() {
-
-
-
-
-
-
+    function getRandom(arr, n) {
+        var result = new Array(n),
+            len = arr.length,
+            taken = new Array(len);
+        while (n--) {
+            var x = Math.floor(Math.random() * len);
+            result[n] = arr[x in taken ? taken[x] : x];
+            taken[x] = --len in taken ? taken[len] : len;
+        }
+        return result;
     }
+
+
+
+    function renderHomePagePictures(randomPaintingArray) {
+        console.log(randomPaintingArray);
+        var html = '<ol class="carousel-indicators">';
+        html += '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>';
+        html += '<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>';
+        html += '<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>';
+        html += '</ol>';
+        html += '<div class="carousel-inner">';
+
+        for (var i = 0; i < randomPaintingArray.length; i++){
+            if (i === 0) {
+                html += '<div class="carousel-item active">';
+            } else {
+                html += '<div class="carousel-item">';
+            }
+
+            html += '<img class="d-block w-100" src="' + randomPaintingArray[i].imgFile + '" alt="First slide">';
+            html += '<div class="carousel-caption d-none d-md-block">';
+            html += '<h5>' + randomPaintingArray[i].name + '</h5>';
+            html += '<p>$' + randomPaintingArray[i].price + '</p>';
+            html += '</div>';
+            html += '</div>';
+        }
+
+        html += '</div>';
+        html += '<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">';
+        html += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+        html += '<span class="sr-only">Previous</span>';
+        html += '</a>';
+        html += '<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">';
+        html += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+        html += '<span class="sr-only">Next</span>';
+        html += '</a>';
+        return html;
+    }
+
 
 
 

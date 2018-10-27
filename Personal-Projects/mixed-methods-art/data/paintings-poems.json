@@ -101,17 +101,39 @@
   ],
   [
     {
-
+      "index": 10,
+      "imgFile": "../img/mma-placeholder.jpg",
+      "price": 10,
+      "name": "European",
+      "description": "dark"
     },
     {
-
+      "index": 11,
+      "imgFile": "../img/mma-placeholder.jpg",
+      "price": 11,
+      "name": "Espresso",
+      "description": "dark"
     },
     {
-
+      "index": 12,
+      "imgFile": "//via.placeholder.com/600x400?text=1",
+      "price": 12,
+      "name": "Viennese",
+      "description": "dark"
     },
     {
-
+      "index": 13,
+      "imgFile": "../img/mma-placeholder.jpg",
+      "price": 13,
+      "name": "Italian",
+      "description": "dark"
+    },
+    {
+      "index": 14,
+      "imgFile": "../img/mma-placeholder.jpg",
+      "price": 14,
+      "name": "French",
+      "description": "dark"
     }
-
   ]
 ]

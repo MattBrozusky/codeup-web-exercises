@@ -40,7 +40,8 @@ $(document).ready(function () {
         }).done(function (data) {
             $("#img-cards").append(renderPaintings(data[0]));
             $("#paintings-carousel").append(renderPaintingsCarousel(data[0]));
-            $("#carouselExampleIndicators").append(renderHomePagePictures(getRandom(data[0], 3)));
+            $("#carouselExampleIndicators").append(renderHomePagePicturesPoems(getRandom(data[0], 3), ""));
+            $("#carouselExampleIndicators2").append(renderHomePagePicturesPoems(getRandom(data[1], 3), 2));
         });
     }
     getStoreData();
@@ -143,7 +144,7 @@ $(document).ready(function () {
     }
     homePageCarouselHide();
 
-
+// Generates a new array of n number of items from first array
     function getRandom(arr, n) {
         var result = new Array(n),
             len = arr.length,
@@ -157,17 +158,17 @@ $(document).ready(function () {
     }
 
 
-
-    function renderHomePagePictures(randomPaintingArray) {
-        console.log(randomPaintingArray);
+//Makes the home page carousel
+    function renderHomePagePicturesPoems(randomPaintingArray, carouselNum) {
         var html = '<ol class="carousel-indicators">';
-        html += '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>';
-        html += '<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>';
-        html += '<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>';
+        html += '<li data-target="#carouselExampleIndicators' + carouselNum + '" data-slide-to="0" class="active"></li>';
+        html += '<li data-target="#carouselExampleIndicators' + carouselNum + '" data-slide-to="1"></li>';
+        html += '<li data-target="#carouselExampleIndicators' + carouselNum + '" data-slide-to="2"></li>';
         html += '</ol>';
         html += '<div class="carousel-inner">';
 
-        for (var i = 0; i < randomPaintingArray.length; i++){
+        //Genertaes all n number of inner html elements
+        for (var i = 0; i < randomPaintingArray.length; i++) {
             if (i === 0) {
                 html += '<div class="carousel-item active">';
             } else {
@@ -183,11 +184,11 @@ $(document).ready(function () {
         }
 
         html += '</div>';
-        html += '<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">';
+        html += '<a class="carousel-control-prev" href="#carouselExampleIndicators' + carouselNum + '" role="button" data-slide="prev">';
         html += '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
         html += '<span class="sr-only">Previous</span>';
         html += '</a>';
-        html += '<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">';
+        html += '<a class="carousel-control-next" href="#carouselExampleIndicators' + carouselNum + '" role="button" data-slide="next">';
         html += '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
         html += '<span class="sr-only">Next</span>';
         html += '</a>';

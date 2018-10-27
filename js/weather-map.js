@@ -18,7 +18,7 @@ $(document).ready(function () {
             q:     "San Antonio, US",
             units: "imperial"
         }).done(function (data) {
-            console.log(data);
+            // console.log(data);
             $("#weather-cards").html(createCards(data));
         });
     }
@@ -52,53 +52,54 @@ $(document).ready(function () {
     //------------------
     // Google Maps
     //------------------
+    function googleMaps() {
+        var mapOptions ={
+            center: {
+                lat: 29.397,
+                lng: -98.5
+            },
+            zoom: 12
+        };
 
-    var mapOptions ={
-        center: {
-            lat: 29.397,
-            lng: -98.5
-        },
-        zoom: 12
-    };
+        var geocoder = new google.maps.Geocoder();
 
-    var geocoder = new google.maps.Geocoder();
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    var address = prompt("Enter an address you want to find.");
-
-
+        var address = prompt("Enter an address you want to find.");
 
 
-    geocoder.geocode({ "address": address }, function(results, status) {
 
-        function toggleBounce() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
+
+        geocoder.geocode({ "address": address }, function(results, status) {
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
             }
-        }
+            if (status === google.maps.GeocoderStatus.OK) {
 
-        if (status === google.maps.GeocoderStatus.OK) {
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
 
-            // Recenter the map over the address
-            map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP
+                });
+                marker.addListener("click", toggleBounce);
+            } else {
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+            console.log(results[0].geometry.bounds);
+        });
 
-            var marker = new google.maps.Marker({
-                position: results[0].geometry.location,
-                map: map,
-                draggable: true,
-                animation: google.maps.Animation.DROP
-            });
 
-            marker.addListener("click", toggleBounce);
-        } else {
-
-
-            alert("Geocoding was not successful - STATUS: " + status);
-        }
-    });
+    }
+    googleMaps();
 // MAKE THE WEATHER FORECAST
 
     // create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.

@@ -168,9 +168,7 @@ a:focus {
 }
 
 .fancy-border {
-    border:6px dashed black;
-    border-right-style: solid;
-    border-bottom-style: solid;
+    border:4px solid black;
     box-shadow: 6px 6px 15px;
 }
 

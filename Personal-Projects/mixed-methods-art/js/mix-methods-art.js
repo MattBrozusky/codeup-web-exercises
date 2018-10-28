@@ -79,9 +79,9 @@ $(document).ready(function () {
             var html = '<article class="col-12 col-md-6 col-xl-4 mt-5">';
             html += '<a id="'+ paintingName + painting.index + '">';
             html += '<div class="card">';
-            html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
             html += '<img class="card-img-top" src="' + painting.imgFile + '" alt="Card image cap">';
-            html += '<div class="card-body">';
+            html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
+            html += '<div class="card-body pt-0">';
             html += '<p class="card-text">' + painting.description + '</p>';
             html += '</div>';
             html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right">$' + painting.price  + '</h6>';

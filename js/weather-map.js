@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     function weatherData() {
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
-            APPID: "d8078a58900152b022c837716684ad65",
+            APPID: "",
             lat: "29.4241",
             lon: "-98.4936",
             units: "imperial"
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 var lon = this.getPosition().lng();
 
                 $.get("http://api.openweathermap.org/data/2.5/forecast", {
-                    APPID: "d8078a58900152b022c837716684ad65",
+                    APPID: "",
                     lat: lat,
                     lon: lon,
                     units: "imperial"

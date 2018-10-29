@@ -1,3 +1,13 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fancy-background {
+    background-color: #1b557a;
+    border-radius: 25px;
+}
+
 hr {
     border: 1px solid black;
 }
@@ -7,6 +17,18 @@ hr {
 }
 
 #map {
-    height: 500px;
-    width: 900px;
+    height: 100vh;
+    width: 100%;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-4 {
+    margin-top: 1em;
+}
+
+.mb-0 {
+    margin-bottom: 0;
 }

@@ -27,20 +27,31 @@ $(document).ready(function () {
 
 
     function createCards(data) {
+        var today = new Date();
         var html = '';
+
         for (var i = 0; i < 3; i++) {
+            var day = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+            day = day.toString();
             var temp = getMinMaxDayTemp(data, i + 1);
 
-            html += '<article class="col s4">';
-            html += '<div class="card blue-grey darken-1">';
+            html += '<article class="col s12">';
+            html += '<div class="card blue-grey darken-1 z-depth-1 hoverable">';
             html += '<div class="card-content white-text">';
-            html += '<span class="card-title center">' + temp.min.toFixed(0) + ' / ' + temp.max.toFixed(0) + '</span>';
-            html += '<div class="center"><img src="http://openweathermap.org/img/w/' + data.list[i * 8].weather[0].icon + '.png" alt=""></div>';
+            html += '<span class="card-title center">' + day.substring(0, 10) + '</span>';
             html += '<hr>';
+            html += '<section class="row mb-0">';
+            html += '<article class="col s6">';
             html += '<h6><span class="weather-header">CLOUDS:</span>' + ' ' + data.list[i * 8].weather[0].description + '</h6>';
             html += '<h6><span class="weather-header">HUMIDITY:</span>' + ' ' + data.list[i * 8].main.humidity + '</h6>';
             html += '<h6><span class="weather-header">WIND:</span>' + ' ' + data.list[i * 8].wind.speed + '</h6>';
             html += '<h6><span class="weather-header">PRESSURE:</span>' + ' ' + data.list[i * 8].main.pressure + '</h6>';
+            html += '</article>';
+            html += '<article class="col s6 mt-4">';
+            html += '<div class="center card-title">' + temp.min.toFixed(0) + ' / ' + temp.max.toFixed(0) + '</div>';
+            html += '<div class="center"><img src="http://openweathermap.org/img/w/' + data.list[i * 8].weather[0].icon + '.png" alt=""></div>';
+            html += '</article>';
+            html += '</section>';
             html += '</div>';
             html += '</div>';
             html += '</article>';
@@ -59,7 +70,7 @@ $(document).ready(function () {
                 lat: 29.397,
                 lng: -98.5
             },
-            zoom: 12
+            zoom: 5
         };
         var geocoder = new google.maps.Geocoder();
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -86,7 +97,6 @@ $(document).ready(function () {
                     draggable: true,
                     animation: google.maps.Animation.DROP
                 });
-
                 marker.addListener("click", toggleBounce);
             } else {
                 alert("Geocoding was not successful - STATUS: " + status);
@@ -102,6 +112,7 @@ $(document).ready(function () {
                     lon: lon,
                     units: "imperial"
                 }).done(function (data) {
+                    console.log(data);
                     $("#marker-location").html(data.city.name);
                     $("#weather-cards").html(createCards(data));
                 });
@@ -109,11 +120,6 @@ $(document).ready(function () {
         });
     }
     googleMaps();
-
-
-
-
-
 
 
 

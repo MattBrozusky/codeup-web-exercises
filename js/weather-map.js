@@ -12,17 +12,18 @@ $(document).ready(function () {
     };
 
 
-    function weatherData() {
-        $.get("http://api.openweathermap.org/data/2.5/forecast", {
-            APPID: "d8078a58900152b022c837716684ad65",
-            q:     "San Antonio, US",
-            units: "imperial"
-        }).done(function (data) {
-            // console.log(data);
-            $("#weather-cards").html(createCards(data));
-        });
-    }
-    weatherData();
+    // function weatherData() {
+    //     $.get("http://api.openweathermap.org/data/2.5/forecast", {
+    //         APPID: "d8078a58900152b022c837716684ad65",
+    //         lat: "",
+    //         lon: "",
+    //         units: "imperial"
+    //     }).done(function (data) {
+    //         // console.log(data);
+    //         $("#weather-cards").html(createCards(data));
+    //     });
+    // }
+    // weatherData();
 
 
     function createCards(data) {
@@ -65,7 +66,7 @@ $(document).ready(function () {
 
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-        var address = prompt("Enter an address you want to find.");
+        var address = new google.maps.LatLng({lat: -34, lng: 151});
 
 
 
@@ -90,16 +91,40 @@ $(document).ready(function () {
                     draggable: true,
                     animation: google.maps.Animation.DROP
                 });
+
                 marker.addListener("click", toggleBounce);
             } else {
                 alert("Geocoding was not successful - STATUS: " + status);
             }
-            console.log(results[0].geometry.bounds);
-        });
 
+            // console.log(results[0].geometry.bounds.j.j);
+
+            // var lat = (results[0].geometry.bounds.j.j + results[0].geometry.bounds.j.l) / 2;
+            // var lon = (results[0].geometry.bounds.l.j + results[0].geometry.bounds.l.l) / 2;
+
+            marker.addListener('dragend', function (event) {
+                var lat = this.getPosition().lat();
+                var lon = this.getPosition().lng();
+
+                // $("#latbox").html(this.getPosition().lat().toString());
+
+                $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                    APPID: "d8078a58900152b022c837716684ad65",
+                    lat: lat,
+                    lon: lon,
+                    units: "imperial"
+                }).done(function (data) {
+                    // console.log(data);
+                    $("#weather-cards").html(createCards(data));
+                });
+            });
+        });
 
     }
     googleMaps();
+
+
+
 // MAKE THE WEATHER FORECAST
 
     // create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.

@@ -1,6 +1,18 @@
 $(document).ready(function () {
     "use strict";
 
+    function weatherData() {
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: "d8078a58900152b022c837716684ad65",
+            lat: "29.4241",
+            lon: "-98.4936",
+            units: "imperial"
+        }).done(function (data) {
+            // console.log(data);
+            $("#weather-cards").html(createCards(data));
+        });
+    }
+    weatherData();
 
     const getMinMaxDayTemp = (data, day) => {
         const temps = data.list.slice(day * 8 - 8, day * 8)
@@ -12,18 +24,6 @@ $(document).ready(function () {
     };
 
 
-    // function weatherData() {
-    //     $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //         APPID: "d8078a58900152b022c837716684ad65",
-    //         lat: "",
-    //         lon: "",
-    //         units: "imperial"
-    //     }).done(function (data) {
-    //         // console.log(data);
-    //         $("#weather-cards").html(createCards(data));
-    //     });
-    // }
-    // weatherData();
 
 
     function createCards(data) {
@@ -61,14 +61,9 @@ $(document).ready(function () {
             },
             zoom: 12
         };
-
         var geocoder = new google.maps.Geocoder();
-
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-        var address = new google.maps.LatLng({lat: -34, lng: 151});
-
-
+        var address = "San Antonio";
 
 
         geocoder.geocode({ "address": address }, function(results, status) {
@@ -97,16 +92,9 @@ $(document).ready(function () {
                 alert("Geocoding was not successful - STATUS: " + status);
             }
 
-            // console.log(results[0].geometry.bounds.j.j);
-
-            // var lat = (results[0].geometry.bounds.j.j + results[0].geometry.bounds.j.l) / 2;
-            // var lon = (results[0].geometry.bounds.l.j + results[0].geometry.bounds.l.l) / 2;
-
             marker.addListener('dragend', function (event) {
                 var lat = this.getPosition().lat();
                 var lon = this.getPosition().lng();
-
-                // $("#latbox").html(this.getPosition().lat().toString());
 
                 $.get("http://api.openweathermap.org/data/2.5/forecast", {
                     APPID: "d8078a58900152b022c837716684ad65",
@@ -114,40 +102,13 @@ $(document).ready(function () {
                     lon: lon,
                     units: "imperial"
                 }).done(function (data) {
-                    // console.log(data);
+                    $("#marker-location").html(data.city.name);
                     $("#weather-cards").html(createCards(data));
                 });
             });
         });
-
     }
     googleMaps();
-
-
-
-// MAKE THE WEATHER FORECAST
-
-    // create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.
-    
-    // read and reread the curriculum and OpenWeatherMap docs carefully on how to get an image of the weather forecast
-    // hint: "http://openweathermap.org/img/w/" + whateverTheWeatherIconValueIs
-    // verify that the OpenWeatherMap data populates by hard coding in lat and lon values
-    // create lat and lon variables to hold lat and lon values.
-    // add lat and lon properties to the function that calls the OpenWeatheMap API GET request
-    // add an input field for lat and lon with button that fires a new request to the OpenWeatherMap API and passes the lat and lon values from the input fields into the request.
-// CREATE THE MAP
-    // using syntax from the previous Maps exercise, add a map below the OpenWeatherMap forecast
-    // add a marker to the map and make it draggable
-    // create a marker drag event that console logs the lat and lon where the marker is dropped
-// WIRE UP MAP TO WEATHER API
-    // add the function call that makes the Weather API request to the marker drag event and pass in the lat and lon values of the marker to the Weather API request function
-
-
-
-
-
-
-
 
 
 

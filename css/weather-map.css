@@ -4,8 +4,10 @@ body {
 }
 
 .fancy-background {
+    margin-top: 2em;
     background-color: #1b557a;
     border-radius: 25px;
+    width: 90%;
 }
 
 hr {
@@ -17,8 +19,14 @@ hr {
 }
 
 #map {
-    height: 100vh;
+    border-radius: 25px;
+    margin-top: 2em;
+    height: 90vh;
     width: 100%;
+}
+
+.border-radius-round {
+    border-radius: 25px;
 }
 
 .mt-0 {
@@ -32,3 +40,4 @@ hr {
 .mb-0 {
     margin-bottom: 0;
 }
+

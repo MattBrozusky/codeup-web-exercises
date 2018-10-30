@@ -57,41 +57,39 @@ $(document).ready(function () {
         renderPaintingCarousel: function (painting) {
             var paintingName = painting.name.split(" ");
             paintingName = paintingName.join("");
-            var html = '<div class="carousel-item col-md-3">';
+            let html = '<div class="carousel-item col-md-3">';
             if (painting.index === 1) {
                 html = '<div class="carousel-item col-md-3 active">';
             }
-
-            html += '<div class="panel panel-default">';
-            html += '<div class="panel-thumbnail">';
-            html += '<a href="' + '#' + paintingName + painting.index + '" title="' + paintingName + '" class="thumb">';
-            html += '<img class="img-fluid mx-auto d-block" src="'+ painting.imgFile +'" alt="slide 1">';
-            html += '</a>';
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
+            html += `
+                    <div class="panel panel-default">
+                        <div class="panel-thumbnail">
+                            <a href="#${paintingName}${painting.index}" title="${paintingName}" class="thumb">
+                                <img class="img-fluid mx-auto d-block" src="${painting.imgFile}" alt="slide 1">
+                            </a>
+                        </div>
+                    </div>
+                </div>`;
             return html;
         },
 
         renderPainting: function (painting) {
             var paintingName = painting.name.split(" ");
             paintingName = paintingName.join("");
-            var html = '<article class="col-12 col-md-6 col-xl-4 mt-5">';
-            html += '<a id="'+ paintingName + painting.index + '">';
-            html += '<div class="card">';
-            html += '<img class="card-img-top" src="' + painting.imgFile + '" alt="Card image cap">';
-            html += '<h4 class="card-title text-center mt-2">' + painting.name + '</h4>';
-            html += '<div class="card-body pt-0">';
-            html += '<p class="card-text">' + painting.description + '</p>';
-            html += '</div>';
-            html += '<h6 class="card-subtitle mb-2 mr-4 text-muted text-right">$' + painting.price  + '</h6>';
-            html += '</div></a>';
-            html += '</article>';
-            return html;
+            return `
+                <article class="col-12 col-md-6 col-xl-4 mt-5">
+                    <a id="${paintingName}${painting.index}">
+                        <div class="card">
+                            <img class="card-img-top" src="${painting.imgFile}" alt="Card image cap">
+                            <h4 class="card-title text-center mt-2">${painting.name}</h4>
+                            <div class="card-body pt-0">
+                                <p class="card-text">${painting.description}</p>
+                            </div>
+                            <h6 class="card-subtitle mb-2 mr-4 text-muted text-right">$${painting.price}</h6>
+                        </div>
+                    </a>
+                </article>`;
         }
-
-
-
     };
 
     function renderPaintingsCarousel(paintings) {

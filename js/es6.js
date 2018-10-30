@@ -33,9 +33,9 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-const name = 'Matthew';
-const email = 'matthew.brozusky@gmail.com';
-const languages = ['html', 'css', 'javascript'];
+const name = `Matthew's`;
+const email = `matthew.brozusky@gmail.com`;
+const languages = [`html`, `css`, `javascript`];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -60,7 +60,7 @@ users.forEach((user) => {
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
-users.forEach(({ name, email, languages }) => {
+users.forEach(({ name, email, languages }, index ,array) => {
     // TODO: rewrite the code below to use object destructuring assignment
     //       note that you can also use destructuring assignment in the function
     //       parameter definition

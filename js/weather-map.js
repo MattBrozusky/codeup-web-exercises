@@ -1,7 +1,7 @@
 $(document).ready(function () {
     "use strict";
 
-    var mapPosition = {
+    let mapPosition = {
         lat: "29.4241",
         lon: "-98.4936"
 
@@ -32,42 +32,44 @@ $(document).ready(function () {
 
 
     function createCards(data) {
-        var today = new Date();
-        var html = '';
+        let today = new Date();
+        let html = '';
 
         // console.log(today);
         // console.log(typeof(today));
 
         for (var i = 0; i < 3; i++) {
-            var day = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+            let day = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
             day = day.toString();
-            var temp = getMinMaxDayTemp(data, i + 1);
+            let temp = getMinMaxDayTemp(data, i + 1);
 
-            html += '<article class="col s12 extra-content">';
-            html += '<div class="card horizontal blue-grey darken-1 z-depth-1 hoverable border-radius-round">';
-            html += '<div class="card-stacked">';
-            html += '<section class="card-content white-text">';
-            html += '<span class="card-title center">' + day.substring(0, 10) + '</span>';
-            html += '<hr>';
-            html += '<article class="row mb-0">';
-            html += '<div class="center card-title">' + temp.min.toFixed(0) + ' / ' + temp.max.toFixed(0) + '</div>';
-            html += '<div class="center"><img src="http://openweathermap.org/img/w/' + data.list[i * 8].weather[0].icon + '.png" alt=""></div>';
-            html += '</article>';
-            html += '</section>';
-            html += '</div>';
-            html += '<div class="card-stacked hide extra-slide">';
-            html += '<section class="card-content white-text">';
-            html += '<h6><span class="weather-header">CLOUDS:</span>' + ' ' + data.list[i * 8].weather[0].description + '</h6>';
-            html += '<h6><span class="weather-header">HUMIDITY:</span>' + ' ' + data.list[i * 8].main.humidity + '</h6>';
-            html += '<h6><span class="weather-header">WIND:</span>' + ' ' + data.list[i * 8].wind.speed + '</h6>';
-            html += '<h6><span class="weather-header">PRESSURE:</span>' + ' ' + data.list[i * 8].main.pressure + '</h6>';
-            html += '</section>';
-            html += '</div>';
-            html += '</div>';
-            html += '</article>';
+            html += `
+            <article class="col s12 extra-content">
+                <div class="card horizontal blue-grey darken-1 z-depth-1 hoverable border-radius-round">
+                    <div class="card-stacked">
+                        <section class="card-content white-text">
+                            <span class="card-title center">${day.substring(0, 10)}</span>
+                            <hr>
+                            <article class="row mb-0">
+                                <div class="center card-title">${temp.min.toFixed(0)} / ${temp.max.toFixed(0)}</div>
+                                <div class="center"><img src="http://openweathermap.org/img/w/${data.list[i * 8].weather[0].icon}.png" alt=""></div>
+                            </article>
+                        </section>
+                    </div>
+                    <div class="card-stacked hide extra-slide">
+                        <section class="card-content white-text">
+                            <h6><span class="weather-header">CLOUDS:</span> ${data.list[i * 8].weather[0].description}</h6>
+                            <h6><span class="weather-header">HUMIDITY:</span> ${data.list[i * 8].main.humidity}</h6>
+                            <h6><span class="weather-header">WIND:</span> ${data.list[i * 8].wind.speed}</h6>
+                            <h6><span class="weather-header">PRESSURE:</span> ${data.list[i * 8].main.pressure}</h6>
+                        </section>
+                    </div>
+                </div>
+            </article>`;
         }
         return html;
     }
+
 
 
     $(document).on('mouseenter', '.extra-content', function () {

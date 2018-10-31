@@ -17,7 +17,7 @@
 
 const hackGitHub = (username) => {
     let fetchRequest = fetch(`https://api.github.com/users/${username}/events`, {
-        headers: {'Authorization': '5e77ba3d3bed378ed36adf7d4750b5015604d80a'}
+        headers: {'Authorization': ''}
 
     });
     fetchRequest

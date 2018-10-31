@@ -39,16 +39,21 @@
         }
     ];
 
-    //1
+    //2
     console.log(users.filter((user) => user.languages.length >= 3));
 
 
-    //2
-    console.log(users.map((user) => user.email));
-
-
-
     //3
+    console.log(users.map(({ id, email }) => {
+        return {
+            email,
+            id
+        };
+    }));
+
+
+
+    //4
     const totalYears = users.reduce((total, user) => {
         return total + user.yearsOfExperience;
     }, 0);
@@ -58,15 +63,15 @@
 
 
 
-    //4
-    const longestEmailUser = users.reduce((longestUserEmail, currentUser) => {
-        return currentUser.email.length >= longestUserEmail.email.length ? currentUser : longestUserEmail;
+    //5
+    const longestEmailUser = users.reduce((prev, curr) => {
+        return curr.email.length > prev.email.length ? curr : prev;
     });
     console.log(longestEmailUser.email);
 
 
 
-    //5
+    //6
     const nameString = users.reduce((nameString, currentUser) => {
         return nameString + currentUser.name + ', '
 
@@ -76,17 +81,22 @@
 
 
 
-    //6
-    const uniqueLanguages =  users.reduce((allLanguages, currentUser) => {
-        return allLanguages + currentUser.languages.join(', ') + ', '
+    //Bonus
 
-    }, '');
-    console.log(uniqueLanguages);
+    const uniqueLanguagesList = (() =>{
+        let uniqueLanguages =  users.reduce((allLanguages, currentUser, index, arr) => {
+            let connector = ', ';
+            if (index === arr.length - 1) {
+                connector = '.';
+                console.log("working")
+            }
+            return allLanguages + currentUser.languages.join(', ') + connector
 
-    let uniqueList = uniqueLanguages.split(',').filter((item, i, allItems) => {
-        return i === allItems.indexOf(item);
-    }).join(',');
-    console.log(uniqueList);
+        }, '');
+        uniqueLanguages = new Set(uniqueLanguages);
+        console.log(uniqueLanguages);
+
+    });
 
 
 // });

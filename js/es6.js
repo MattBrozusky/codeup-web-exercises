@@ -50,9 +50,9 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach((user) => {
-    return emails.push(user.email);
-});
+
+users.forEach((user) => emails.push(user.email));
+
 users.forEach((user) => {
     return names.push(user.name);
 });
@@ -60,7 +60,7 @@ users.forEach((user) => {
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
-users.forEach(({ name, email, languages }, index ,array) => {
+users.forEach(({ name, email, languages }) => {
     // TODO: rewrite the code below to use object destructuring assignment
     //       note that you can also use destructuring assignment in the function
     //       parameter definition

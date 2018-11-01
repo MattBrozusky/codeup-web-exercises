@@ -15,18 +15,15 @@
 
 
 
-// const hackGitHub = (username) => {
-//     let fetchRequest = fetch(`https://api.github.com/users/${username}/events`, {
-//         headers: {'Authorization': ''}
-//     });
-//
-//     fetchRequest
-//         .then((response) => response.json())
-//         .then(data => console.log(data))
-// };
-//
-//
-// hackGitHub('MattBrozusky');
+const hackGitHub = (username) => {
+    return fetch(`https://api.github.com/users/${username}/events`, {
+        headers: {'Authorization': 'token '}
+    }).then((response) => response.json());
+};
+
+
+hackGitHub('MattBrozusky')
+    .then(data => console.log(data));
 
 
 

@@ -17,7 +17,7 @@ keyboard.keyMap = {
 
 
 
-keyboard.controllerEvents = function () {
+keyboard.controllerEvents = () => {
 
     var self = this;
     this.pressKey = null;
@@ -33,7 +33,7 @@ keyboard.controllerEvents = function () {
 };
 
 
-component.stage = function (canvas, conf) {
+component.stage = (canvas, conf) => {
 
 
     this.keyEvent = new keyboard.controllerEvents();
@@ -58,3 +58,36 @@ component.stage = function (canvas, conf) {
     }
 
 };
+
+
+//Game Component Snake
+
+
+Component.snake = (canvas, conf) => {
+    this.stage = new Component.stage(canvas, conf);
+    this.initSnake = () => {
+        for (let i = 0; i < this.stage.conf.size; i++) {
+            this.stage.length.push({ x: i, y: 0 })
+        }
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

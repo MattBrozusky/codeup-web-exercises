@@ -15,16 +15,46 @@
 
 
 
-const hackGitHub = (username) => {
-    let fetchRequest = fetch(`https://api.github.com/users/${username}/events`, {
-        headers: {'Authorization': ''}
+// const hackGitHub = (username) => {
+//     let fetchRequest = fetch(`https://api.github.com/users/${username}/events`, {
+//         headers: {'Authorization': ''}
+//     });
+//
+//     fetchRequest
+//         .then((response) => response.json())
+//         .then(data => console.log(data))
+// };
+//
+//
+// hackGitHub('MattBrozusky');
 
-    });
-    fetchRequest
-        .then((response) => response.json())
-        .then(data => console.log(data[0].created_at))
+
+
+
+
+
+// Using the Star Wars API, log the homeworld of a searched character
+
+
+const homeWorld = (character) => {
+  fetch(`https://swapi.co/api/people/?search=${character}`, {
+
+  }).then((response) => response.json())
+    .then(data => console.log(data));
 };
 
-hackGitHub('MattBrozusky');
+homeWorld('luke');
+
+
+
+
+
+
+
+
+
+
+
+
 
 

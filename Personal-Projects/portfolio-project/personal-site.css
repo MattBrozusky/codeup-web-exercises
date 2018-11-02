@@ -18,7 +18,7 @@ body{
 .context {
     width: 100%;
     position: absolute;
-    top:50vh;
+    top:30vh;
 
 }
 
@@ -30,8 +30,7 @@ body{
 
 
 .area{
-    background: #4e54c8;
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
     width: 100%;
     height:100vh;
 }
@@ -51,7 +50,7 @@ body{
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
     animation: animate 25s linear infinite;
     bottom: -150px;
 
@@ -144,7 +143,7 @@ body{
     }
 
     100%{
-        transform: translateY(0deg) rotate(720deg);
+        transform: translateY(100px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
     }

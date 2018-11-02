@@ -2,16 +2,15 @@ $(document).ready(() => {
 "use strict";
 
 
-
-$('.parallax').parallax();
-
-$('.pushpin').pushpin({
-    top: 400,
-    bottom: 5000
-});
+//Nav pushpin call
+    $('.pushpin').pushpin({
+        top: $('.area').height(),
+        bottom: $(document).height()
+    });
 
 
-
+//Parallax call
+    $('.parallax').parallax();
 
 
 

@@ -1,13 +1,14 @@
 $(document).ready(() => {
-    "use strict";
+"use strict";
 
 
 
-    $('.parallax').parallax();
+$('.parallax').parallax();
 
-    $('.pushpin').pushpin();
-
-
+$('.pushpin').pushpin({
+    top: 400,
+    bottom: 5000
+});
 
 
 

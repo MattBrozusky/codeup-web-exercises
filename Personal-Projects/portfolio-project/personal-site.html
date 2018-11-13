@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Matthew Brozusky</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=KoHo|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="personal-site.css">
 </head>
 <body>
@@ -32,17 +34,33 @@
 
     <nav class="pushpin">
         <div class="nav-wrapper grey darken-4">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Sass</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#">JavaScript</a></li>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="block" style="width: 100%; height: 2000px">
 
+    <div class="block" style="width: 100%; height: 2000px; overflow-x: hidden">
+
+        <div class="divider-background">
+            <section class="divider grey darken-4"></section>
+            <h4>About</h4>
+            <section class="divider2 grey darken-4"></section>
+        </div>
+
+
+        <a class="waves-effect waves-light btn modal-trigger grey darken-4" href="#modal1">Weather Map</a>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal-size">
+            <div class="modal-content center wrap">
+                <a href="#!" class="modal-close btn-floating btn-small waves-effect waves-light red x-button">X</a>
+                <iframe src="../../weather_map.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="2" class="html-frame"></iframe>
+            </div>
+        </div>
     </div>
 
     <div class="parallax-container">

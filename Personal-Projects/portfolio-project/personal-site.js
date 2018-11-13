@@ -13,6 +13,14 @@ $(document).ready(() => {
     $('.parallax').parallax();
 
 
+//Modal Call
+    $('.modal').modal()
+
+
+
+
+
+
 
 
 

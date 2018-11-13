@@ -1,3 +1,10 @@
+:root {
+    --main-bg: rgb(91 27 78);
+    --main-text: rgb(207 43 0);
+    --extra-color: #fdbb2d;
+}
+
+
 /***************************
 Header Animation Css
 Original design: https://codepen.io/mohaiman/pen/MQqMyo
@@ -11,7 +18,7 @@ Original design: https://codepen.io/mohaiman/pen/MQqMyo
 }
 
 body{
-    font-family: 'Exo', sans-serif;
+    font-family: 'Slabo 27px', serif;
 }
 
 
@@ -30,7 +37,7 @@ body{
 
 
 .area{
-    background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+    background: linear-gradient(to bottom left, #1a2a6c, #b21f1f, #fdbb2d);
     width: 100%;
     height:100vh;
 }
@@ -150,10 +157,46 @@ body{
 
 }
 
+/***************************
+Page Divider
+***************************/
+.divider-background {
+    height: 20em;
+}
+
+.divider {
+    position: relative;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    top: 105px;
+    left: -1%;
+    z-index: 10;
+    width: 105%;
+    height: 4em;
+}
+
+.divider2 {
+    position: relative;
+    -webkit-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
+    top: -100px;
+    left: -1%;
+    z-index: 10;
+    width: 105%;
+    height: 4em;
+}
+
+.main-container {
+    overflow-x: hidden;
+}
+
 
 /***************************
 Rest of Page
 ***************************/
+.pushpin {
+    z-index: 100;
+}
 
 .pin-top {
    position: relative;
@@ -167,4 +210,42 @@ Rest of Page
 
 .pinned {
    position: fixed !important;
+}
+
+.modal-size {
+    height: 40em;
+    width: 40em;
+}
+
+.x-button {
+    position: absolute;
+    right: 0.1%;
+    top: 0.2%;
+    padding: 0;
+}
+
+.wrap {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0!important;
+    overflow: hidden;
+}
+
+.html-frame {
+    height: 167%;
+    width: 172%;
+    border: 0;
+
+    -ms-transform: scale(0.60);
+    -moz-transform: scale(0.60);
+    -o-transform: scale(0.60);
+    -webkit-transform: scale(0.60);
+    transform: scale(0.60);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }

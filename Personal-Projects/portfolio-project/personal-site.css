@@ -161,7 +161,7 @@ body{
 Page Divider
 ***************************/
 .divider-background {
-    height: 20em;
+    height: 15em;
 }
 
 .divider {
@@ -194,6 +194,14 @@ Page Divider
 /***************************
 Rest of Page
 ***************************/
+hr {
+    position: relative;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    z-index: 10;
+    top: -3rem;
+}
+
 .pushpin {
     z-index: 100;
 }
@@ -248,4 +256,12 @@ Rest of Page
     -o-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
+}
+
+.ml-3{
+    margin-left: 1rem;
+}
+
+.submit-button {
+    width: 100%;
 }

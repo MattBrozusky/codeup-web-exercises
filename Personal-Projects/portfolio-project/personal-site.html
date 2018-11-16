@@ -13,7 +13,7 @@
     <header id="home">
         <div class="context">
             <div class="row">
-                <h1 class="col s6 offset-s3">Hello, My Name Is Matthew Brozusky And I'm A Web Developer</h1>
+                <h1 class="col s12 m8 offset-m2 l6 offset-l3 xl4 offset-xl4 ">Hello, My Name Is Matthew Brozusky And I'm A Web Developer</h1>
             </div>
         </div>
         <div class="area" >
@@ -32,27 +32,29 @@
         </div>
     </header>
 
-    <nav class="pushpin">
-        <div class="nav-wrapper grey darken-4">
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <section class="wrapper-nav">
+        <nav class="pushpin">
+            <div class="nav-wrapper grey darken-4">
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
 
 
     <div style="overflow-x: hidden;">
 
         <div class="divider-background" id="portfolio">
-            <section class="divider grey darken-4"></section>
+            <section class="divider grey darken-3"></section>
             <h4 class="ml-3">Portfolio</h4>
-            <section class="divider2 grey darken-4"></section>
+            <section class="divider2 grey darken-3"></section>
         </div>
         <section class="container">
-            <a class="waves-effect waves-light btn modal-trigger grey darken-4" href="#modal1">Weather Map</a>
+            <a class="waves-effect waves-light btn modal-trigger grey darken-3" href="#modal1">Weather Map</a>
             <!-- Modal Structure -->
             <div id="modal1" class="modal modal-size">
                 <div class="modal-content center wrap">
@@ -60,16 +62,17 @@
                     <iframe src="../../weather_map.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="2" class="html-frame"></iframe>
                 </div>
             </div>
+
         </section>
 
 
 
         <div class="divider-background" id="about">
-            <section class="divider grey darken-4"></section>
-            <h4 class="ml-3">About</h4>
-            <section class="divider2 grey darken-4"></section>
+            <section class="divider3 grey darken-3"></section>
+            <h4>About</h4>
+            <section class="divider4 grey darken-3"></section>
         </div>
-        <div class="parallax-container">
+        <div class="parallax-container tilted-1">
             <div class="parallax"><img src="../../img/diningroom.jpg"></div>
         </div>
         <div class="section white">
@@ -78,20 +81,20 @@
                 <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
             </div>
         </div>
-        <div class="parallax-container">
+        <div class="parallax-container tilted-1">
             <div class="parallax"><img src="../../img/diningroom.jpg"></div>
         </div>
 
 
 
         <div class="divider-background" id="contact">
-            <section class="divider grey darken-4"></section>
+            <section class="divider grey darken-3"></section>
             <h4 class="ml-3">Contact</h4>
-            <section class="divider2 grey darken-4"></section>
+            <section class="divider2 grey darken-3"></section>
         </div>
         <section class="container">
             <header class="row">
-                <h1>CONTACT ME</h1>
+                <h1>Contact Me</h1>
             </header>
             <hr>
             <form action="">
@@ -115,7 +118,7 @@
                 </div>
                 <div class="row">
                     <div class="col s12 m6 offset-m3">
-                        <button class="btn waves-effect waves-light grey darken-4 submit-button" type="submit" name="action">Submit</button>
+                        <button class="btn waves-effect waves-light grey darken-3 submit-button" type="submit" name="action">Submit</button>
                     </div>
                 </div>
             </form>
@@ -136,6 +139,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+    <script src="../../sandbox/anime-master/anime.min.js"></script>
     <script src="personal-site.js"></script>
 </body>
 </html>

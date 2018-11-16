@@ -14,7 +14,9 @@ $(document).ready(() => {
 
 
 //Modal Call
-    $('.modal').modal()
+    $('.modal').modal();
+
+
 
 
 });

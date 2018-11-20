@@ -2,8 +2,12 @@ body {
     text-align:center;
 }
 
+.game-container {
+    height: 700px;
+    width: 100%;
+    border: 10px solid black;
+}
+
 canvas {
-    height: 400px;
-    width: 520px;
-    border: 2px solid rgb(151, 149, 149);
+
 }

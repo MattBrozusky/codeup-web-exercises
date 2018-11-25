@@ -3,9 +3,9 @@
 /**
  * Namespace
  */
-var Game      = Game      || {};
-var Keyboard  = Keyboard  || {};
-var Component = Component || {};
+const Game      = {};
+const Keyboard  = {};
+const Component = {};
 
 /**
  * Keyboard Map
@@ -23,12 +23,12 @@ Keyboard.Keymap = {
 Keyboard.ControllerEvents = function() {
 
     // Setts
-    var self      = this;
+    const self      = this;
     this.pressKey = null;
     this.keymap   = Keyboard.Keymap;
 
     // Keydown Event
-    document.onkeydown = function(event) {
+    document.onkeydown = event => {
         self.pressKey = event.which;
     };
 
@@ -59,7 +59,7 @@ Component.Stage = function(canvas, conf) {
 
     // Merge Conf
     if (typeof conf === 'object') {
-        for (var key in conf) {
+        for (const key in conf) {
             if (conf.hasOwnProperty(key)) {
                 this.conf[key] = conf[key];
             }
@@ -80,7 +80,7 @@ Component.Snake = function(canvas, conf) {
     this.initSnake = function() {
 
         // Itaration in Snake Conf Size
-        for (var i = 0; i < this.stage.conf.size; i++) {
+        for (let i = 0; i < this.stage.conf.size; i++) {
 
             // Add Snake Cells
             this.stage.length.push({x: i, y:0});
@@ -122,9 +122,8 @@ Game.Draw = function(context, snake) {
 
     // Draw Stage
     this.drawStage = function() {
-
         // Check Keypress And Set Stage direction
-        var keyPress = snake.stage.keyEvent.getKey();
+        const keyPress = snake.stage.keyEvent.getKey();
         if (typeof(keyPress) !== 'undefined') {
             snake.stage.direction = keyPress;
         }
@@ -134,10 +133,9 @@ Game.Draw = function(context, snake) {
         context.fillRect(0, 0, snake.stage.width, snake.stage.height);
 
         // Snake Position
-        var nx = snake.stage.length[0].x;
-        var ny = snake.stage.length[0].y;
-        console.log(nx);
-        console.log(ny);
+        let nx = snake.stage.length[0].x;
+        let ny = snake.stage.length[0].y;
+
         // Add position by stage direction
         switch (snake.stage.direction) {
             case 'right':
@@ -161,21 +159,19 @@ Game.Draw = function(context, snake) {
         }
 
         // Logic of Snake food
-        let tail;
         if (nx === snake.stage.food.x && ny === snake.stage.food.y) {
-            tail = {x: nx, y: ny};
+            var tail = {x: nx, y: ny};
             snake.stage.score++;
             snake.initFood();
         } else {
-            tail = snake.stage.length.pop();
+            var tail = snake.stage.length.pop();
             tail.x   = nx;
             tail.y   = ny;
         }
         snake.stage.length.unshift(tail);
 
         // Draw Snake
-        for (var i = 0; i < snake.stage.length.length; i++) {
-            var cell = snake.stage.length[i];
+        for (const cell of snake.stage.length) {
             this.drawCell(cell.x, cell.y);
         }
 
@@ -183,7 +179,7 @@ Game.Draw = function(context, snake) {
         this.drawCell(snake.stage.food.x, snake.stage.food.y);
 
         // Draw Score
-        context.fillText('Score: ' + snake.stage.score, 5, (snake.stage.height - 5));
+        context.fillText(`Score: ${snake.stage.score}`, 5, (snake.stage.height - 5));
     };
 
     // Draw Cell
@@ -201,6 +197,7 @@ Game.Draw = function(context, snake) {
     //         this.collision = true;
     //     }
     // }
+    // Check Collision with walls
     this.collision = (nx, ny) => {
         if (nx === -1 || nx === (snake.stage.width / snake.stage.conf.cw) || ny === -1 || ny === (snake.stage.height / snake.stage.conf.cw)) {
             return true;
@@ -213,22 +210,22 @@ Game.Draw = function(context, snake) {
 /**
  * Game Snake
  */
-Game.Snake = function(elementId, conf) {
+Game.Snake = (elementId, conf) => {
 
     // Sets
-    var canvas   = document.getElementById(elementId);
-    var context  = canvas.getContext("2d");
-    var snake    = new Component.Snake(canvas, conf);
-    var gameDraw = new Game.Draw(context, snake);
+    const canvas   = document.getElementById(elementId);
+    const context  = canvas.getContext("2d");
+    const snake    = new Component.Snake(canvas, conf);
+    const gameDraw = new Game.Draw(context, snake);
 
     // Game Interval
-    setInterval(function() {gameDraw.drawStage();}, snake.stage.conf.fps);
+    setInterval(() => {gameDraw.drawStage();}, snake.stage.conf.fps);
 };
 
 
 /**
  * Window Load
  */
-window.onload = function() {
-    var snake = new Game.Snake('stage', {fps: 100, size: 4});
+window.onload = () => {
+    const snake = Game.Snake('stage', {fps: 100, size: 4});
 };
